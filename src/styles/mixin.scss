@@ -1,0 +1,11 @@
+@import 'vars';
+
+@mixin media($query) {
+    // Get the breakpoint value from the $breakpoints map
+    $breakpoint: map-get($breakpoints, $query);
+  
+    // Output the media query
+    @media screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
