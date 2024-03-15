@@ -31,6 +31,10 @@
   margin: 0;
 }
 
+.btn {
+  padding: 0.8rem 1.5rem;
+}
+
 .navbar {
   position: fixed;
   top: 5px;
