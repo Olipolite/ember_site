@@ -27,15 +27,62 @@
   z-index: 1;
 }
 .hero__title {
-  font-size: 5rem;
+  font-size: 5rem !important;
   margin: 0;
 }
 
+.navbar {
+  position: fixed;
+  top: 5px;
+  left: 0;
+  right: 0;
+  max-width: 95%;
+  width: 100%;
+  margin: 5px auto 0;
+  border-radius: 2px;
+  background-color: azure;
+}
 .navbar__items {
   max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
+  color: red;
+}
+.navbar__links {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .navbar__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem;
+  }
+}
+.navbar__burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 2rem;
+}
+@media screen and (min-width: 768px) {
+  .navbar__burger {
+    display: none;
+  }
+}
+.navbar__burger-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 2rem;
+}
+.navbar__link {
+  margin: 1rem 2.5rem;
+}
+.navbar__logo {
+  margin: 0 2rem;
 }
 
 /*# sourceMappingURL=main-output.css.map */

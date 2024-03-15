@@ -1,11 +1,60 @@
 .navbar {
+    position: fixed;
+    top: 5px;
+    left: 0;
+    right: 0;
+    max-width: 95%;
+    width: 100%;
+    margin: 5px auto 0;
+    border-radius: 2px;
+    background-color: azure;
+    
     &__items {
         max-width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
+        flex-direction: row;
+        color: red;
+    }
 
+    &__links {
+        display: none;
+
+        @include mixin.media('md') {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 2rem;
+        }
+
+    }
+
+    &__burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5rem 2rem;
+
+        @include mixin.media('md') {
+            display: none;
+
+        }
+    }
+
+    &__burger-close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5rem 2rem;
+    }
+
+    &__link {
+        margin: 1rem 2.5rem;
+    }
+
+    &__logo {
+        margin: 0 2rem;
     }
 
 }
