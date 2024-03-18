@@ -10,8 +10,8 @@ const Home = () => {
                     <img className="hero__image" src={heroImage} alt="wow!"></img> 
                     <div className="hero__content">
                         <h1 className="hero__title">Ember</h1>
-                        <p className="hero__paragraph">RPG - Free to play</p>
-                        <button className="btn hero__btn">Play now</button>
+                        <p className="hero__paragraph">RPG - FREE TO PLAY</p>
+                        <button className="btn hero__btn">PLAY NOW</button>
                     </div>
                 </div>
             </div>
