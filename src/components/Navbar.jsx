@@ -3,21 +3,7 @@ import BurgerMenu from "../assets/burger_menu.png";
 
 
 
-const Navbar = ({ handleBurgerMenu }) => {
-    // <p className="navbar__link" href="#">News</p>
-    // <p className="navbar__link" href="#">Game Info</p>
-    // <p className="navbar__link" href="#">Beta</p>
-    // <p className="navbar__link" href="#">Account</p>
-    // <p className="navbar__link" href="#">Play Now</p>
-
-    const links = [
-        {id: 0, name: 'News' },
-        {id: 1, name: 'Game Info' },
-        {id: 2, name: 'Beta' },
-        {id: 3, name: 'Account' },
-        {id: 4, name: 'Play Now' },
-    ];
-
+const Navbar = ({ links, handleBurgerMenu }) => {
     return (
         <div className="navbar">
             <div className="navbar__items">

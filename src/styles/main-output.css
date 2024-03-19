@@ -15,6 +15,7 @@
   max-height: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 60% 50%;
   z-index: -1;
 }
 .hero__content {
@@ -66,7 +67,8 @@
   width: 100%;
   margin: 5px auto 0;
   border-radius: 2px;
-  background-color: rgba(223, 31, 31, 0.8);
+  background-color: rgba(223, 31, 31, 0.9);
+  z-index: 50;
 }
 .navbar__items {
   max-width: 100%;
@@ -113,7 +115,6 @@
 }
 
 .mobile-menu {
-  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -139,12 +140,18 @@
   font-size: 1.5rem;
 }
 
-.open {
-  display: block;
-}
-
 .mobile-menu__container {
   padding: 20px;
+}
+
+.block__container {
+  background-color: azure;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+.block__title {
+  font-size: 2.5rem;
+  line-height: 1.1;
 }
 
 /*# sourceMappingURL=main-output.css.map */
