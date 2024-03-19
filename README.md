@@ -1,6 +1,6 @@
 Ember Website
 
-1. gh repo clone Olipolite/ember_site
+1. git clone https://github.com/Olipolite/ember_site
 
 2. npm install
 
