@@ -65,5 +65,12 @@
     font-size: 1.5rem;
     color: #ffff;
     position: relative;
+    cursor: pointer;
     z-index: 1;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+
+    &:hover {
+        background-color: #e20707;
+        transform: scale(1.05);
+    }
 }

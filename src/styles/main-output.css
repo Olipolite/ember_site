@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap");
 .hero__gradient {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
@@ -60,7 +61,13 @@
   font-size: 1.5rem;
   color: white;
   position: relative;
+  cursor: pointer;
   z-index: 1;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+.btn:hover {
+  background-color: #e20707;
+  transform: scale(1.05);
 }
 
 .navbar {
@@ -73,7 +80,7 @@
   margin: 5px auto 0;
   border-radius: 2px;
   background-color: rgba(223, 31, 31, 0.9);
-  z-index: 50;
+  z-index: 2;
 }
 .navbar__items {
   max-width: 100%;
@@ -81,7 +88,9 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  list-style: none;
   color: white;
+  cursor: pointer;
 }
 .navbar__links {
   display: none;
@@ -92,7 +101,6 @@
     justify-content: center;
     align-items: center;
     margin: 0 2rem;
-    cursor: pointer;
   }
 }
 .navbar__burger {
@@ -175,11 +183,37 @@
     text-align: left;
   }
 }
+.block__title {
+  margin: 0;
+  font-family: "Noto Sans HK", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .block__title {
+    font-size: 2rem;
+  }
+}
+.block__title-hero {
+  margin: 0;
+  font-family: "Noto Sans HK", sans-serif;
+  font-size: 5.5rem;
+  line-height: 1;
+  font-style: oblique 60deg;
+}
+@media screen and (min-width: 768px) {
+  .block__title-hero {
+    font-size: 8rem;
+  }
+}
 .block__content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 .block__samurai {
   position: static;
@@ -190,21 +224,9 @@
 @media screen and (min-width: 768px) {
   .block__samurai {
     position: absolute;
-    top: 15%;
-    left: 15%;
+    top: 10px;
+    left: 13%;
   }
-}
-.block__title {
-  margin: 0;
-  font-size: 2.5rem;
-  line-height: 1;
-  text-align: center;
-}
-.block__title-hero {
-  margin: 0;
-  font-size: 8rem;
-  line-height: 1;
-  font-style: oblique 45deg;
 }
 .block__paragraph {
   display: flex;
@@ -214,6 +236,7 @@
 }
 @media screen and (min-width: 768px) {
   .block__paragraph {
+    margin-top: 5rem;
     margin-left: 30rem;
   }
 }
@@ -237,7 +260,6 @@
   flex-direction: column;
   width: 75%;
   list-style: none;
-  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .footer__links {
@@ -246,6 +268,7 @@
 }
 .footer__link {
   margin: 1.5rem 0;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .footer__link {

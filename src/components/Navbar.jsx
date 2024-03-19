@@ -5,14 +5,14 @@ const Navbar = ({ links, handleBurgerMenu }) => {
     return (
         <div className="navbar">
             <div className="navbar__items">
-                <p className="navbar__logo">IKOL</p>
-                <div className="navbar__links">
+                <div className="navbar__logo">IKOL</div>
+                <nav className="navbar__links">
                     {links.map((link) => (
-                        <p key={link.id} className="navbar__link">
+                        <li key={link.id} className="navbar__link">
                             {link.name}
-                        </p>
+                        </li>
                     ))}
-                </div>
+                </nav>
                 <div className="navbar__burger">
                     <img src={BurgerMenu} onClick={handleBurgerMenu} alt="burgerMenu"></img>
                 </div>

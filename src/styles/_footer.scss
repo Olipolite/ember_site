@@ -20,7 +20,6 @@
         flex-direction: column;
         width: 75%;
         list-style: none;
-        cursor: pointer;
 
         @include mixin.media('md') {
             flex-direction: row;
@@ -29,6 +28,8 @@
 
     &__link {
         margin: 1.5rem 0;
+        cursor: pointer;
+        
         @include mixin.media('md') {
             margin: 3rem 1.5rem;
         }
