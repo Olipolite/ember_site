@@ -9,3 +9,7 @@
         @content;
     }
 }
+
+@mixin include-font() {
+    @import url('#{$font-url}');
+}

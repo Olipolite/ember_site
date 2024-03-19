@@ -1,8 +1,6 @@
 import React from "react";
 import BurgerMenu from "../assets/burger_menu.png";
 
-
-
 const Navbar = ({ links, handleBurgerMenu }) => {
     return (
         <div className="navbar">

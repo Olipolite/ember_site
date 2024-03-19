@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/main-output.css";
-import heroImage from "../assets/hero_image.png";
-import test from "../assets/test.png";
+// import heroImage from "../assets/hero_image.png";
+// import test from "../assets/test.png";
 import testy from "../assets/testy.png";
 
 const Home = () => {

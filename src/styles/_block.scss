@@ -1,15 +1,68 @@
 .block {
+    position: relative;
+
+    @include mixin.media('md') {
+        height: 85vh;
+    }
 
 
     &__container {
-        background-color: azure;
-        padding: 0 0.5rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        background-color: #EBEBEB;
+        padding: 2rem 0.5rem;
         text-align: center;
+
+        @include mixin.media('md') {
+            text-align: left;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__samurai {
+        position: static;
+        height: auto;
+        max-width: 300px;
+        width: 100%;
+        @include mixin.media('md') {
+            position: absolute;
+            top: 15%;
+            left: 15%;
+        }
     }
 
     &__title {
+        margin: 0;
         font-size: 2.5rem;
-        line-height: 1.1;
+        line-height: 1;
+        text-align: center;
+
+        &-hero{
+            margin: 0;
+            font-size: 8rem;
+            line-height: 1;
+            font-style: oblique 45deg;
+        }
+    }
+
+    &__paragraph {
+        display: flex;
+        justify-content: flex-end;
+        max-width: 450px;
+        width: 100%;
+
+        @include mixin.media('md') {
+            margin-left: 30rem;
+        }
     }
 
 }

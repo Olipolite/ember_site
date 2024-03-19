@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import MobileMenu from "./components/MobileMenu";
 import Block from "./components/Block";
+import Footer from "./components/Footer";
 
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -25,6 +26,7 @@ function App() {
       <Navbar links={links} handleBurgerMenu={handleBurgerMenu} />
       <MobileMenu links={links} isOpen={openMenu} handleCloseMobileMenu={handleBurgerMenu} />
       <Block />
+      <Footer />
     </div>
   );
 }
