@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import Home from "./components/Home";
+import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import MobileMenu from "./components/MobileMenu";
-import Block from "./components/Block";
 import Footer from "./components/Footer";
 
 function App() {
@@ -22,10 +21,9 @@ function App() {
 
   return (
     <div>
-      <Home />
       <Navbar links={links} handleBurgerMenu={handleBurgerMenu} />
+      <Home />
       <MobileMenu links={links} isOpen={openMenu} handleCloseMobileMenu={handleBurgerMenu} />
-      <Block />
       <Footer />
     </div>
   );

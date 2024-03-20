@@ -350,4 +350,11 @@
   text-decoration: underline;
 }
 
+.beta {
+  height: 85vh;
+}
+.beta__para {
+  color: white;
+}
+
 /*# sourceMappingURL=main-output.css.map */
