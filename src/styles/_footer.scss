@@ -28,7 +28,12 @@
 
     &__link {
         margin: 1.5rem 0;
+        transition: text-decoration 0.3s ease, transform 0.5s ease;
         cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
         
         @include mixin.media('md') {
             margin: 3rem 1.5rem;
@@ -50,12 +55,19 @@
             flex-direction: row;
         }
 
-        p {
+        p, a {
             margin: 1.5rem 0;
+            text-decoration: none;
 
             @include mixin.media('md') {
                 margin: 3rem 1.5rem;
             }
         }
+
+    }
+    
+    &__scroll {
+        text-decoration: none;
+        cursor: pointer;
     }
 }

@@ -63,6 +63,11 @@
         @include mixin.media('md') {
             position: absolute;
             top: 10px;
+            left: 5%;
+        }
+        @include mixin.media('lg') {
+            position: absolute;
+            top: 10px;
             left: 13%;
         }
     }
@@ -74,10 +79,15 @@
         max-width: 450px;
         width: 100%;
 
+        
         @include mixin.media('md') {
+            margin-top: 5rem;
+            margin-left: 20rem;
+        }
+
+        @include mixin.media('lg') {
             margin-top: 5rem;
             margin-left: 30rem;
         }
     }
-
 }

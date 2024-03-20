@@ -1,5 +1,13 @@
 import React from "react";
 
+  
+  const scrollToTop = () =>{ 
+    window.scrollTo({ 
+      top: 0,  
+      behavior: "smooth",
+    }); 
+  }; 
+
 const Footer = () => {
     return (
         <div className="footer">
@@ -15,7 +23,7 @@ const Footer = () => {
                 <div className="footer__copyright">
                     <div className="footer__copyright--container">
                         <p>IKOL</p>
-                        <p>BACK TO TOP</p>
+                        <p className="footer__scroll" onClick={scrollToTop}>BACK TO TOP</p>
                     </div>
                 </div>
         </div>
