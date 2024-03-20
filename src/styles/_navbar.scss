@@ -10,6 +10,10 @@
     border-radius: 2px;
     background-color: rgba(223, 31, 31, 0.9);
     z-index: 2;
+
+    svg {
+        color: white;
+    }
     
     &__items {
         max-width: 100%;
@@ -67,16 +71,23 @@
         }
 
         &:hover {
-            background-color: #e30000;
+            background-color: #a40909;
             text-decoration: underline;
         }
     }
 
     &__logo {
+        display: flex;
+        align-items: center;
         padding: 0rem 2rem;
 
         @include mixin.media('lg') {
             padding: 0rem 2.5rem;
+        }
+
+        svg {
+            margin-bottom: 8px;
+            margin-right: 10px;
         }
     }
 
