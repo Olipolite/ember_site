@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/ember_site/static/css/main.cbefb371.css",
-    "main.js": "/ember_site/static/js/main.ae503536.js",
+    "main.css": "/ember_site/static/css/main.0aa420bf.css",
+    "main.js": "/ember_site/static/js/main.2765fd11.js",
     "static/media/testy.png": "/ember_site/static/media/testy.b125a58dbb9ff4cc3401.png",
+    "static/media/blue-smurai.png": "/ember_site/static/media/blue-smurai.4447de20ceb2dfe46114.png",
+    "static/media/samurai_cool.png": "/ember_site/static/media/samurai_cool.3af866c87d59c1948a6a.png",
     "static/media/samurai.png": "/ember_site/static/media/samurai.5a51d405ba67f9cbd9ec.png",
+    "static/media/blue-smurai-blackwhite.png": "/ember_site/static/media/blue-smurai-blackwhite.f1ff89764e300f4f1f3f.png",
+    "static/media/samurai-blacak-white.png": "/ember_site/static/media/samurai-blacak-white.6ccff2396c0d6aef6ff3.png",
     "index.html": "/ember_site/index.html",
-    "main.cbefb371.css.map": "/ember_site/static/css/main.cbefb371.css.map",
-    "main.ae503536.js.map": "/ember_site/static/js/main.ae503536.js.map"
+    "main.0aa420bf.css.map": "/ember_site/static/css/main.0aa420bf.css.map",
+    "main.2765fd11.js.map": "/ember_site/static/js/main.2765fd11.js.map"
   },
   "entrypoints": [
-    "static/css/main.cbefb371.css",
-    "static/js/main.ae503536.js"
+    "static/css/main.0aa420bf.css",
+    "static/js/main.2765fd11.js"
   ]
 }
