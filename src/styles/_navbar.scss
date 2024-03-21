@@ -74,6 +74,12 @@
             background-color: #a40909;
             text-decoration: underline;
         }
+
+        a {
+            text-decoration: none;
+            list-style: none;
+            color: #ffff;
+        }
     }
 
     &__logo {

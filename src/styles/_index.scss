@@ -1,9 +1,11 @@
 @use 'mixin';
 @use 'vars';
 
-@import 'home';
+@import './pages/home';
+@import './pages/beta-page';
+
 @import 'navbar';
 @import 'mobile-menu';
 @import 'block';
 @import 'footer';
-@import 'beta';
+@import 'beta-block';

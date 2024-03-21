@@ -70,6 +70,15 @@
   transform: scale(1.05);
 }
 
+.beta-page__container {
+  height: 100vh;
+}
+.beta-page h1 {
+  text-align: center;
+  font-size: 12rem;
+  color: white;
+}
+
 .navbar {
   position: fixed;
   top: 5px;
@@ -143,6 +152,11 @@
   background-color: #a40909;
   text-decoration: underline;
 }
+.navbar__link a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
 .navbar__logo {
   display: flex;
   align-items: center;
@@ -192,6 +206,7 @@
 
 .block {
   position: relative;
+  background-color: #EBEBEB;
 }
 @media screen and (min-width: 768px) {
   .block {
@@ -203,8 +218,10 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
+  max-width: 1280px;
   width: 100%;
-  background-color: #EBEBEB;
+  margin-left: auto;
+  margin-right: auto;
   padding: 2rem 0.5rem;
   text-align: center;
 }
@@ -228,6 +245,7 @@
 }
 .block__title-hero {
   margin: 0;
+  margin-top: 1rem;
   font-family: "Noto Sans HK", sans-serif;
   font-size: 5.5rem;
   line-height: 1;
@@ -239,49 +257,55 @@
   }
 }
 .block__content {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
+  width: 75%;
+}
+@media screen and (min-width: 992px) {
+  .block__content {
+    flex-direction: row;
+  }
 }
 .block__samurai {
   position: static;
   height: auto;
   max-width: 300px;
   width: 100%;
+  margin-right: 8rem;
 }
-@media screen and (min-width: 768px) {
-  .block__samurai {
-    position: absolute;
-    top: 10px;
-    left: 5%;
-  }
-}
-@media screen and (min-width: 992px) {
-  .block__samurai {
-    position: absolute;
-    top: 10px;
-    left: 13%;
-  }
-}
-.block__paragraph {
+.block__classes-carousel {
   display: flex;
-  justify-content: flex-end;
-  max-width: 450px;
+  justify-content: space-between;
   width: 100%;
 }
-@media screen and (min-width: 768px) {
-  .block__paragraph {
-    margin-top: 5rem;
-    margin-left: 20rem;
-  }
+.block__circle {
+  visibility: visible;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: solid 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@media screen and (min-width: 992px) {
-  .block__paragraph {
-    margin-top: 5rem;
-    margin-left: 30rem;
-  }
+.block__circle-hidden {
+  visibility: hidden;
+}
+.block__icon {
+  visibility: visible !important;
+  display: flex;
+  max-width: 25px;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.block__icon:hover {
+  transform: scale(1.4);
+  opacity: 1;
 }
 
 .footer {
