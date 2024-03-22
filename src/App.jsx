@@ -26,7 +26,7 @@ function App() {
             <Navbar links={links} handleBurgerMenu={handleBurgerMenu} />
             <MobileMenu links={links} isOpen={openMenu} handleCloseMobileMenu={handleBurgerMenu} />
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/ember_site" element={<Home />} />
                 <Route path="/beta" element={<BetaPage />} />
             </Routes>
             <Footer />

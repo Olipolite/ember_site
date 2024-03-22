@@ -12,16 +12,10 @@ const Block = () => {
     const imgRef = useRef(null);
     const blockCircleRef = useRef(null);
     const [imageSrc, setImageSrc] = useState(Samurai);
-    const [circle, setCircle] = useState(null);
 
-    const handleCircleAnimation = () => {
-        gsap.to(blockCircleRef.current, {
-
-        })
-    }
 
     const handleClassesIcon = (newSrc) => {
-        // Fade out animation
+        // Fade out animation img
         gsap.to(imgRef.current, {
             opacity: 0,
             duration: 0.5,
@@ -37,9 +31,11 @@ const Block = () => {
                     opacity: 1,
                     duration: 0.5,
                 });
+
             },
         });
     };
+
 
     return (
         <div className="block">

@@ -1,15 +1,22 @@
 .navbar {
     position: fixed;
-    top: 5px;
+    top: 0;
     left: 0;
     right: 0;
-    max-width: 95%;
+    max-width: 100%;
     width: 100%;
-    height: 65px;
-    margin: 5px auto;
+    height: 55px;
+    margin: 0 auto;
     border-radius: 2px;
     background-color: rgba(223, 31, 31, 0.9);
     z-index: 2;
+
+    @include mixin.media ('md') {
+        height: 65px;
+        top: 5px;
+        max-width: 95%;
+        margin: 5px auto;
+    }
 
     svg {
         color: white;
@@ -43,11 +50,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 2rem;
+        margin-bottom: 0.1rem;
+        padding: 0 1rem;
         cursor: pointer;
 
         @include mixin.media('md') {
             display: none;
+            padding: 0 2rem;
         }
     }
 
@@ -85,14 +94,17 @@
     &__logo {
         display: flex;
         align-items: center;
-        padding: 0rem 2rem;
+        padding: 0rem 1rem;
+
+        @include mixin.media('md') {
+            padding: 0rem 2rem;
+        }
 
         @include mixin.media('lg') {
             padding: 0rem 2.5rem;
         }
 
         svg {
-            margin-bottom: 8px;
             margin-right: 10px;
         }
     }
