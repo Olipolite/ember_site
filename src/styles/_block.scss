@@ -2,7 +2,9 @@
 
 .block {
     position: relative;
-    background-color: #EBEBEB;
+    background-image: linear-gradient(to bottom, #aaead1, #95dfc9, #7fd4c2, #68c9bc, #4dbeb6, #52bdb6, #57bcb6, #5cbbb6, #7bc4bd, #96ccc5, #afd5ce, #c7ddd8);
+    // background-image: linear-gradient(to right bottom, #f08aa5, #f67996, #fa6785, #fe5373, #ff3c5f, #ff3f61, #ff4162, #ff4464, #ff5f7b, #fd7691, #f88ba4, #f39fb5);
+    opacity: 0.9;
 
     @include mixin.media('md') {
         height: 85vh;

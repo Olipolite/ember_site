@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap");
 .hero__gradient {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 }
 .hero__container {
   position: relative;
@@ -242,7 +242,8 @@
 
 .block {
   position: relative;
-  background-color: #EBEBEB;
+  background-image: linear-gradient(to bottom, #aaead1, #95dfc9, #7fd4c2, #68c9bc, #4dbeb6, #52bdb6, #57bcb6, #5cbbb6, #7bc4bd, #96ccc5, #afd5ce, #c7ddd8);
+  opacity: 0.9;
 }
 @media screen and (min-width: 768px) {
   .block {
@@ -416,11 +417,18 @@
   text-decoration: underline;
 }
 
-.beta {
-  height: 85vh;
+.beta-block {
+  height: 95vh;
+  max-width: 100%;
 }
-.beta__para {
-  color: white;
+.beta-block__container {
+  height: 100%;
+  opacity: 0.9;
+  background-color: #C7DDD8;
+}
+.beta-block__container p {
+  height: 100%;
+  margin: 0;
 }
 
 /*# sourceMappingURL=main-output.css.map */
