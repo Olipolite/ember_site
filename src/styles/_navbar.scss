@@ -31,7 +31,6 @@
         flex-direction: row;
         list-style: none;
         color: #ffff;
-        cursor: pointer;
     }
 
     &__links {
@@ -42,6 +41,7 @@
             justify-content: center;
             align-items: center;
             padding: 0 2rem;
+            cursor: pointer;
         }
 
     }
@@ -95,6 +95,7 @@
         display: flex;
         align-items: center;
         padding: 0rem 1rem;
+        cursor: pointer;
 
         @include mixin.media('md') {
             padding: 0rem 2rem;
@@ -108,5 +109,4 @@
             margin-right: 10px;
         }
     }
-
 }

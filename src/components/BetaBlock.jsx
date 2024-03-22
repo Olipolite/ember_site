@@ -1,5 +1,4 @@
 import React from 'react';
-import Dragon from "../assets/dragon.jpg";
 
 const BetaBlock = () => {
     return (
