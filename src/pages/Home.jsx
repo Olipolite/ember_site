@@ -4,7 +4,7 @@ import BetaBlock from "../components/BetaBlock";
 import "../styles/main-output.css";
 // import heroImage from "../assets/hero_image.png";
 // import test from "../assets/test.png";
-import testy from "../assets/testy.png";
+import hunter from "../assets/hunter.jpg";
 
 
 
@@ -14,7 +14,7 @@ const Home = () => {
             <div className="hero">
                 <div className="hero__gradient">
                     <div className="hero__container">
-                        <img className="hero__image" src={testy} alt="wow!"></img>
+                        <img className="hero__image" src={hunter} alt="wow!"></img>
                         <div className="hero__content">
                             <h1 className="hero__title">Ember</h1>
                             <p className="hero__paragraph">RPG - FREE TO PLAY</p>

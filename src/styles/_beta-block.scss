@@ -3,9 +3,10 @@
     max-width: 100%;
 
     &__container {
+        position: relative;
         height: 100%;
-        opacity: 0.9;
-        background-color: #C7DDD8;
+        // opacity: 0.9;
+        // background-color: #C7DDD8;
 
         p {
             height: 100%;
@@ -13,5 +14,66 @@
         }
     }
 
+    &__image { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: 39% 95%;
+        z-index: -1;
+        height: 100%;
+        max-width: 100%;
+        width: 100%;
+        opacity: 0.8;
+
+        @include mixin.media ('md') {
+            object-position: 45% 95%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        max-height: 400px;
+        max-width: 500px;
+        height: 100%;
+        width: 100%;
+        
+        @include mixin.media ('md') {
+            justify-content: flex-start;
+            position: absolute;
+            top: 20%;
+            right: 20%;
+        }
+    }
+
+    &__title {
+        font-family: "Noto Sans HK", sans-serif;
+        margin: 0;
+        font-size: 2.375rem;
+        line-height: 1;
+        font-style: oblique 60deg;
+        color: #ffff;
+
+        @include mixin.media ('md') {
+            font-size: 8rem;
+        }
+    }
+
+    &__button {
+        opacity: 1;
+        margin-top: 2rem;
+        background-color:  rgb(241, 145, 1);
+        color: aliceblue;
+        max-width: 200px;
+        max-height: 35px;
+        font-size: 0.8rem;
+
+        &:hover {
+            background-color:  rgb(241, 145, 1);
+        }
+    }
 
 }
