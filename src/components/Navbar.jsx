@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 
 const Navbar = ({ links, handleBurgerMenu }) => {
+
     const logoDog = useRef(null);
     const animationRef = useRef(null);
 
@@ -19,6 +20,7 @@ const Navbar = ({ links, handleBurgerMenu }) => {
             animationRef.current.kill();
         };
     }, []);
+
 
     return (
         <div className="navbar">

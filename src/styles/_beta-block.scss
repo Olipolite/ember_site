@@ -4,14 +4,9 @@
 
     &__container {
         position: relative;
+        display: flex;
+        justify-content: flex-end;
         height: 100%;
-        // opacity: 0.9;
-        // background-color: #C7DDD8;
-
-        p {
-            height: 100%;
-            margin: 0;
-        }
     }
 
     &__image { 
@@ -32,22 +27,29 @@
     }
 
     &__content {
+        position: relative;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex;
         flex-direction: column;
-        max-height: 400px;
-        max-width: 500px;
+        max-height: 450px;
+        max-width: 600px;
         height: 100%;
         width: 100%;
+        margin-top: 5rem;
+        margin-right: 15rem;
+        padding-top: 3rem;
         
-        @include mixin.media ('md') {
-            justify-content: flex-start;
-            position: absolute;
-            top: 20%;
-            right: 20%;
-        }
     }
+    &__content-border {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid $orange;
+    }
+
 
     &__title {
         font-family: "Noto Sans HK", sans-serif;
@@ -58,7 +60,21 @@
         color: #ffff;
 
         @include mixin.media ('md') {
-            font-size: 8rem;
+            font-size: 7rem;
+        }
+    }
+
+    &__paragraph {
+        max-width: 450px;
+        margin: 0;
+        font-family: $paragraph-font;
+        font-size: 0.8rem;
+        font-weight: 400;
+        text-align: center;
+        color: #ffff;
+
+        @include mixin.media('md') {
+            font-size: 0.9rem;
         }
     }
 
