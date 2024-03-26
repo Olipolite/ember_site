@@ -342,14 +342,14 @@
   max-height: 32px;
   height: 100%;
   width: 100%;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 .block__btn {
   position: relative;
-  max-height: 32px;
+  min-height: 32px;
   max-width: 195px;
   height: 100%;
   width: 100%;
@@ -388,14 +388,6 @@
     flex-direction: row;
   }
 }
-.block__content-border {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: 2px solid rgb(241, 145, 1);
-}
 .block__samurai {
   position: static;
   height: auto;
@@ -411,7 +403,12 @@
 }
 .block__classes-wrapper {
   max-width: 500px;
-  width: 100%;
+  width: auto;
+}
+@media screen and (min-width: 768px) {
+  .block__classes-wrapper {
+    width: 100%;
+  }
 }
 .block__classes-carousel {
   display: flex;
@@ -524,6 +521,7 @@
   display: flex;
   justify-content: flex-end;
   height: 100%;
+  padding: 0 0.5rem;
 }
 .beta-block__image {
   position: absolute;
@@ -553,8 +551,13 @@
   height: 100%;
   width: 100%;
   margin-top: 5rem;
-  margin-right: 15rem;
+  margin-right: 0;
   padding-top: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .beta-block__content {
+    margin-right: 15rem;
+  }
 }
 .beta-block__content-border {
   height: 100%;
@@ -580,6 +583,7 @@
 .beta-block__paragraph {
   max-width: 450px;
   margin: 0;
+  padding: 0 0.5rem;
   font-family: "IBM Plex Serif", serif;
   font-size: 0.8rem;
   font-weight: 400;

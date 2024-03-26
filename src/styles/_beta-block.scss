@@ -7,6 +7,7 @@
         display: flex;
         justify-content: flex-end;
         height: 100%;
+        padding: 0 0.5rem;
     }
 
     &__image { 
@@ -37,8 +38,12 @@
         height: 100%;
         width: 100%;
         margin-top: 5rem;
-        margin-right: 15rem;
+        margin-right: 0;
         padding-top: 3rem;
+        
+        @include   mixin.media('md') {
+            margin-right: 15rem;
+        }
         
     }
     &__content-border {
@@ -67,6 +72,7 @@
     &__paragraph {
         max-width: 450px;
         margin: 0;
+        padding: 0 0.5rem;
         font-family: $paragraph-font;
         font-size: 0.8rem;
         font-weight: 400;

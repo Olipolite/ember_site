@@ -75,15 +75,15 @@
         max-height: 32px;
         height: 100%;
         width: 100%;
-        margin-top: 1.5rem;
+        margin: 1.5rem 0;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
     }
 
     &__btn {
         position: relative;
-        max-height: 32px;
+        min-height: 32px;
         max-width: 195px;
         height: 100%;
         width: 100%;
@@ -123,15 +123,7 @@
             flex-direction: row;
         }
     }
-    
-    &__content-border {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 0;
-        border: 2px solid $orange; // Adjust border color as needed
-    }
+
 
     &__samurai {
         position: static;
@@ -149,7 +141,11 @@
 
     &__classes-wrapper {
         max-width: 500px;
-        width: 100%;
+        width: auto;
+        @include mixin.media('md') {
+
+            width: 100%;
+        }
     }
 
 
