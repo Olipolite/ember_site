@@ -34,6 +34,34 @@ const Block = () => {
         });
     };
 
+    const buttonRef = useRef(null);
+    const borderRefTopRight = useRef(null);
+    const borderRefBottomLeft = useRef(null);
+
+    const handleMouseEnter = () => {
+        gsap.to(borderRefTopRight.current, { duration: 0.3, opacity: '0.9', borderTop: '0', borderLeft: '0' });
+        gsap.to(borderRefBottomLeft.current, { duration: 0.3, opacity: '0.9', borderBottom: '0', borderRight: '0' });
+    };
+
+    const handleMouseLeave = () => {
+        gsap.to(borderRefTopRight.current, { duration: 0.3, opacity: '0.9', borderTop: '10px solid white', borderLeft: '10px solid rgb(241, 145, 1)' });
+        gsap.to(borderRefBottomLeft.current, { duration: 0.3, opacity: '0.9', borderBottom: '10px solid white', borderRight: '10px solid rgb(241, 145, 1)' });
+    };
+
+    const buttonRefBlue = useRef(null);
+    const borderRefTopRightBlue = useRef(null);
+    const borderRefBottomLeftBlue = useRef(null);
+
+    const handleMouseEnterBlue = () => {
+        gsap.to(borderRefTopRightBlue.current, { duration: 0.3, opacity: '0.9', borderTop: '0', borderLeft: '0' });
+        gsap.to(borderRefBottomLeftBlue.current, { duration: 0.3, opacity: '0.9', borderBottom: '0', borderRight: '0' });
+    };
+
+    const handleMouseLeaveBlue = () => {
+        gsap.to(borderRefTopRightBlue.current, { duration: 0.3, opacity: '0.9', borderTop: '10px solid white', borderLeft: '10px solid rgba(30, 197, 227)' });
+        gsap.to(borderRefBottomLeftBlue.current, { duration: 0.3, opacity: '0.9', borderBottom: '10px solid white', borderRight: '10px solid rgba(30, 197, 227)' });
+    };
+
     return (
         <div className="block">
             <div className="block__container">
@@ -41,8 +69,16 @@ const Block = () => {
                 <h2 className="block__title-hero">HERO!</h2>
                 <p className="block__paragraph">Proident ullamco enim excepteur non duis adipisicing Lorem. Qui est incididunt commodo aute esse tempor fugiat aliqua exercitation id magna.</p>
                 <div className="block__button-wrapper">
-                    <button className="block__btn block__btn-orange">Talent Calculator</button>
-                    <button className="block__btn">Play Now</button>
+                    <button ref={buttonRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="block__btn block__btn-orange">
+                        Talent Calculator
+                        <div ref={borderRefTopRight} className="border__orange-top-right"></div>
+                        <div ref={borderRefBottomLeft} className="border__orange-bottom-left"></div>
+                    </button>
+                    <button ref={buttonRefBlue} onMouseEnter={handleMouseEnterBlue} onMouseLeave={handleMouseLeaveBlue} className="block__btn">
+                        Play Now
+                        <div ref={borderRefTopRightBlue} className="border__blue-top-right"></div>
+                        <div ref={borderRefBottomLeftBlue} className="border__blue-bottom-left"></div>
+                    </button>
                 </div>
 
                 <div className="block__content">

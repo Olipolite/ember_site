@@ -97,18 +97,95 @@
         font-size: 0.8rem;
         font-weight: 600;
         cursor: pointer;
-        transition: background-color 0.5s ease, transform 0.5s ease;
-        &:hover {
-            transform: scale(1.05);
-        }
+        transition: background-color 0.3s ease, transform 0.3s ease;
 
+        .border__blue-top-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-top: 10px solid white;
+            border-left: 10px solid $teal;
+            width: 0;
+            opacity: 0.9;
+            transition: width 0.3s ease;
+        }
+        .border__blue-bottom-left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-bottom: 10px solid white;
+            border-right: 10px solid $teal;
+            width: 0;
+            opacity: 0.9;
+            transition: width 0.3s ease;
+        }
+    
+        // &:hover {
+    
+        //     &:before {
+        //         border-top: none;
+        //         border-left: none;
+        //     }
+        // }
+    
+        // &:before {
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     border-top: 15px solid white;
+        //     border-left: 15px solid $teal;
+        //     width: 0;
+        //     opacity: 0.9;
+        //     // transition: border-top 0.3s ease, border-left 0.3s ease;
+        // }
+    
         &-orange {
             background-color: $orange;
-            &:hover {
-                transform: scale(1.05);
+    
+            // &:hover {
+    
+            //     &:before {
+            //         border-top: none;
+            //         border-left: none;
+            //     }
+            // }
+
+            // &:before {
+            //     content: '';
+            //     position: absolute;
+            //     top: 0;
+            //     right: 0;
+            //     border-top: 15px solid white;
+            //     border-left: 15px solid $orange;
+            //     width: 0;
+            //     opacity: 0.9;
+            //     // transition: border-top 0.3s ease, border-left 0.3s ease;
+            // }
+            .border__orange-top-right {
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-top: 10px solid white;
+                border-left: 10px solid $orange;
+                width: 0;
+                opacity: 0.9;
+                transition: width 0.3s ease;
+            }
+            .border__orange-bottom-left {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                border-right: 10px solid $orange;
+                border-bottom: 10px solid white;
+                width: 0;
+                opacity: 0.9;
+                transition: width 0.3s ease;
             }
         }
     }
+
+    
     
     &__content {
         position: relative;
