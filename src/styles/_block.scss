@@ -88,6 +88,7 @@
         height: 100%;
         width: 100%;
         margin: 0 0.5rem;
+        color: #000000;
         background-color: $teal;
         border: none;
         border-radius: 2px;
@@ -239,6 +240,7 @@
 
     &__circle {
         visibility: visible;
+        background-color: transparent;
         width: 75px;
         height: 75px;
         border-radius: 50%;
@@ -258,7 +260,7 @@
         max-width: 25px;
         width: 100%;
         cursor: pointer;
-        opacity: 0.3;
+        opacity: 0.3 !important;
         transition: transform 0.3s ease, opacity 0.3s ease,;
 
         &:hover {

@@ -34,6 +34,7 @@ const Block = () => {
         });
     };
 
+    // Probably could so with some refactoring :3
     const buttonRef = useRef(null);
     const borderRefTopRight = useRef(null);
     const borderRefBottomLeft = useRef(null);

@@ -354,6 +354,7 @@
   height: 100%;
   width: 100%;
   margin: 0 0.5rem;
+  color: #000000;
   background-color: rgb(30, 197, 227);
   border: none;
   border-radius: 2px;
@@ -455,6 +456,7 @@
 }
 .block__circle {
   visibility: visible;
+  background-color: transparent;
   width: 75px;
   height: 75px;
   border-radius: 50%;
@@ -472,7 +474,7 @@
   max-width: 25px;
   width: 100%;
   cursor: pointer;
-  opacity: 0.3;
+  opacity: 0.3 !important;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .block__icon:hover {
@@ -599,7 +601,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  border: 1px solid rgb(241, 145, 1);
+  border-top: 1px solid rgb(241, 145, 1);
 }
 .beta-block__title {
   font-family: "Noto Sans HK", sans-serif;
