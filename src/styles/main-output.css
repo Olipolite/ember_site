@@ -453,6 +453,7 @@
 }
 .block__classes-carousel p {
   font-weight: 100;
+  margin-top: 0.2rem;
 }
 .block__circle {
   visibility: visible;
@@ -474,7 +475,7 @@
   max-width: 25px;
   width: 100%;
   cursor: pointer;
-  opacity: 0.3 !important;
+  opacity: 0.3;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .block__icon:hover {

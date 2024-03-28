@@ -6,7 +6,11 @@ import BlueSamurai from '../assets/blue-smurai.png';
 import BlackWhiteSamurai from '../assets/samurai-blacak-white.png';
 import BlackWhiteMaleSamurai from '../assets/blue-smurai-blackwhite.png';
 import SamuraiCool from '../assets/samurai_cool.png';
-import Classes from '../assets/classes.png';
+import Warrior from '../assets/icons_classes/WarriorIcon.png';
+import Bowmaster from '../assets/icons_classes/ArcherIcon.png';
+import Thief from '../assets/icons_classes/ThiefIcon.png';
+import Magician from '../assets/icons_classes/MageIcon.png';
+import Brawler from '../assets/icons_classes/BrawlerIcon.png';
 
 const Block = () => {
     const imgRef = useRef(null);
@@ -88,31 +92,31 @@ const Block = () => {
                         <div className="block__classes-carousel">
                             <div>
                                 <div className={imageSrc === Samurai ? 'block__circle' : 'block__circle block__circle-hidden'} ref={blockCircleRef} onClick={() => handleClassesIcon(Samurai)}>
-                                    <img src={Classes} alt="icon" className="block__icon" />
+                                    <img src={Warrior} alt="icon" className="block__icon" />
                                 </div>
                                 <p>Warrior</p>
                             </div>
                             <div>
                                 <div className={imageSrc === BlueSamurai ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(BlueSamurai)}>
-                                    <img src={Classes} alt="icon" className="block__icon" />
+                                    <img src={Bowmaster} alt="icon" className="block__icon" />
                                 </div>
-                                <p>Archer</p>
+                                <p>Bowmaster</p>
                             </div>
                             <div>
                                 <div className={imageSrc === BlackWhiteSamurai ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(BlackWhiteSamurai)}>
-                                    <img src={Classes} alt="icon" className="block__icon" />
+                                    <img src={Thief} alt="icon" className="block__icon" />
                                 </div>
                                 <p>Thief</p>
                             </div>
                             <div>
                                 <div className={imageSrc === BlackWhiteMaleSamurai ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(BlackWhiteMaleSamurai)}>
-                                    <img src={Classes} alt="icon" className="block__icon" />
+                                    <img src={Magician} alt="icon" className="block__icon" />
                                 </div>
                                 <p>Magician</p>
                             </div>
                             <div>
                                 <div className={imageSrc === SamuraiCool ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(SamuraiCool)}>
-                                    <img src={Classes} alt="icon" className="block__icon" />
+                                    <img src={Brawler} alt="icon" className="block__icon" />
                                 </div>
                                 <p>Brawler</p>
                             </div>
