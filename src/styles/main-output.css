@@ -614,7 +614,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  border-top: 1px solid rgb(241, 145, 1);
+  border-color: rgb(241, 145, 1);
+}
+.beta-block__content-border-bottom {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-color: rgb(241, 145, 1);
 }
 .beta-block__title {
   font-family: "Noto Sans HK", sans-serif;

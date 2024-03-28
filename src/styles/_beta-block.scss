@@ -52,7 +52,16 @@
         position: absolute;
         top: 0;
         left: 0;
-        border-top: 1px solid $orange;
+        border-color: rgb(241, 145, 1);
+    }
+
+    &__content-border-bottom {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-color: rgb(241, 145, 1);
     }
 
 
