@@ -1,6 +1,8 @@
 import React from "react";
 import Block from "../components/Block";
 import BetaBlock from "../components/BetaBlock";
+
+import handleButtonClick from '../functions/helper-functions';
 import "../styles/main-output.css";
 // import heroImage from "../assets/hero_image.png";
 // import test from "../assets/test.png";
@@ -18,7 +20,7 @@ const Home = () => {
                         <div className="hero__content">
                             <h1 className="hero__title">Ember</h1>
                             <p className="hero__paragraph">RPG - FREE TO PLAY</p>
-                            <button className="btn hero__btn">PLAY NOW</button>
+                            <button type="button" onClick={handleButtonClick} className="btn hero__btn">PLAY NOW</button>
                         </div>
                     </div>
                 </div>

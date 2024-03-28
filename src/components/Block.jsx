@@ -1,11 +1,14 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Samurai from '../assets/samurai.png';
-import BlueSamurai from '../assets/blue-smurai.png';
-import BlackWhiteSamurai from '../assets/samurai-blacak-white.png';
-import BlackWhiteMaleSamurai from '../assets/blue-smurai-blackwhite.png';
-import SamuraiCool from '../assets/samurai_cool.png';
+import handleButtonClick from '../functions/helper-functions';
+
+import Samurai from '../assets/portraits_classes/samurai.png';
+import BlueSamurai from '../assets/portraits_classes/blue-smurai.png';
+import BlackWhiteSamurai from '../assets/portraits_classes/samurai-blacak-white.png';
+import BlackWhiteMaleSamurai from '../assets/portraits_classes/blue-smurai-blackwhite.png';
+import SamuraiCool from '../assets/portraits_classes/samurai_cool.png';
 import Warrior from '../assets/icons_classes/WarriorIcon.png';
 import Bowmaster from '../assets/icons_classes/ArcherIcon.png';
 import Thief from '../assets/icons_classes/ThiefIcon.png';
@@ -16,6 +19,32 @@ const Block = () => {
     const imgRef = useRef(null);
     const blockCircleRef = useRef(null);
     const [imageSrc, setImageSrc] = useState(Samurai);
+
+    const blockRef = useRef(null);
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.fromTo(
+            blockRef.current,
+            {
+                opacity: 0,
+                y: -50,
+            },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: blockRef.current,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none',
+                },
+            }
+        );
+    }, []);
+
+
 
     const handleClassesIcon = (newSrc) => {
         // Fade out animation img
@@ -38,7 +67,7 @@ const Block = () => {
         });
     };
 
-    // Probably could so with some refactoring :3
+    // Probably could do with some refactoring :3
     const buttonRef = useRef(null);
     const borderRefTopRight = useRef(null);
     const borderRefBottomLeft = useRef(null);
@@ -69,7 +98,7 @@ const Block = () => {
 
     return (
         <div className="block">
-            <div className="block__container">
+            <div className="block__container" ref={blockRef}>
                 <p className="block__title">CHOOSE YOUR</p>
                 <h2 className="block__title-hero">HERO!</h2>
                 <p className="block__paragraph">Proident ullamco enim excepteur non duis adipisicing Lorem. Qui est incididunt commodo aute esse tempor fugiat aliqua exercitation id magna.</p>
@@ -79,7 +108,7 @@ const Block = () => {
                         <div ref={borderRefTopRight} className="border__orange-top-right"></div>
                         <div ref={borderRefBottomLeft} className="border__orange-bottom-left"></div>
                     </button>
-                    <button ref={buttonRefBlue} onMouseEnter={handleMouseEnterBlue} onMouseLeave={handleMouseLeaveBlue} className="block__btn">
+                    <button ref={buttonRefBlue} onClick={handleButtonClick} onMouseEnter={handleMouseEnterBlue} onMouseLeave={handleMouseLeaveBlue} className="block__btn">
                         Play Now
                         <div ref={borderRefTopRightBlue} className="border__blue-top-right"></div>
                         <div ref={borderRefBottomLeftBlue} className="border__blue-bottom-left"></div>
