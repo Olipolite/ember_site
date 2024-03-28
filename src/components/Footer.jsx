@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
   const scrollToTop = () =>{ 
     window.scrollTo({ 
@@ -7,21 +8,23 @@ import React from "react";
     }); 
   }; 
 
-const Footer = () => {
+const Footer = ({ links }) => {
     return (
         <div className="footer">
             <div className="footer__container">
                 <nav className="footer__links">
-                    <li className="footer__link">NEWS</li>
-                    <li className="footer__link">GAME INFO</li>
-                    <li className="footer__link">BETA</li>
-                    <li className="footer__link">ACCOUNT</li>
-                    <li className="footer__link">PLAY NOW</li>
+                    {links.map((link) => (
+                        <li key={link.id} className="footer__link">
+                            <Link to={link.path}>{link.name}</Link>
+                        </li>
+                    ))}
                 </nav>
             </div>
                 <div className="footer__copyright">
                     <div className="footer__copyright--container">
-                        <p>IKOL</p>
+                    <Link to='/ember_site'>
+                        <p className="footer__logo">IKOL</p>
+                    </Link>
                         <p className="footer__scroll" onClick={scrollToTop}>BACK TO TOP</p>
                     </div>
                 </div>

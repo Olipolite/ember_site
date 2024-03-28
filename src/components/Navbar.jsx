@@ -36,9 +36,11 @@ const Navbar = ({ links, handleBurgerMenu }) => {
                 </div>
                 <nav className="navbar__links">
                     {links.map((link) => (
-                        <li key={link.id} className="navbar__link">
-                            <Link to={link.name}>{link.name}</Link>
-                        </li>
+                        <Link to={link.path}>
+                            <li key={link.id} className="navbar__link">
+                                {link.name}
+                            </li>
+                        </Link>
                     ))}
                 </nav>
                 <div className="navbar__burger">
