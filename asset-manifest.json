@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ember_site/static/css/main.27c2f764.css",
-    "main.js": "/ember_site/static/js/main.e1fdfc50.js",
+    "main.css": "/ember_site/static/css/main.63f88225.css",
+    "main.js": "/ember_site/static/js/main.9f0e5458.js",
     "static/media/dragon.jpg": "/ember_site/static/media/dragon.237d3485d5dcdf82605f.jpg",
     "static/media/blue-smurai.png": "/ember_site/static/media/blue-smurai.4447de20ceb2dfe46114.png",
     "static/media/samurai_cool.png": "/ember_site/static/media/samurai_cool.3af866c87d59c1948a6a.png",
@@ -11,11 +11,11 @@
     "static/media/blue-smurai-blackwhite.png": "/ember_site/static/media/blue-smurai-blackwhite.f1ff89764e300f4f1f3f.png",
     "static/media/samurai-blacak-white.png": "/ember_site/static/media/samurai-blacak-white.6ccff2396c0d6aef6ff3.png",
     "index.html": "/ember_site/index.html",
-    "main.27c2f764.css.map": "/ember_site/static/css/main.27c2f764.css.map",
-    "main.e1fdfc50.js.map": "/ember_site/static/js/main.e1fdfc50.js.map"
+    "main.63f88225.css.map": "/ember_site/static/css/main.63f88225.css.map",
+    "main.9f0e5458.js.map": "/ember_site/static/js/main.9f0e5458.js.map"
   },
   "entrypoints": [
-    "static/css/main.27c2f764.css",
-    "static/js/main.e1fdfc50.js"
+    "static/css/main.63f88225.css",
+    "static/js/main.9f0e5458.js"
   ]
 }
