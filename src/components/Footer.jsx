@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
+import Godot from "../assets/godot_logo.png";
+
   const scrollToTop = () =>{ 
     window.scrollTo({ 
       top: 0,  
@@ -27,6 +29,7 @@ const Footer = ({ links }) => {
                     </Link>
                         <p className="footer__scroll" onClick={scrollToTop}>BACK TO TOP</p>
                     </div>
+                    <img className="godot" src={Godot} alt="godot"></img>
                 </div>
         </div>
     )

@@ -46,7 +46,7 @@
     }
     
     &__copyright {
-        
+        position: relative;
     }
 
     &__copyright--container {
@@ -86,5 +86,18 @@
         &:hover {
             text-decoration: underline;
         }
+    }
+
+    // &__godot-logo {
+    //     max-width: 450px;
+    //     width: 100%;
+    // }
+
+    .godot {
+        position: absolute;
+        top: 0.5rem;
+        right: 2rem;
+        max-width: 220px;
+        width: 100%;
     }
 }

@@ -525,6 +525,9 @@
     margin: 3rem 1.5rem;
   }
 }
+.footer__copyright {
+  position: relative;
+}
 .footer__copyright--container {
   display: flex;
   justify-content: center;
@@ -559,6 +562,13 @@
 }
 .footer__scroll:hover {
   text-decoration: underline;
+}
+.footer .godot {
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  max-width: 220px;
+  width: 100%;
 }
 
 .beta-block {

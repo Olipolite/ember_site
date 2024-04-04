@@ -44,19 +44,18 @@ const Block = () => {
         );
     }, []);
 
-
-
     const handleClassesIcon = (newSrc) => {
         // Fade out animation img
         gsap.to(imgRef.current, {
             opacity: 0,
             duration: 0.5,
             onComplete: () => {
+                // Reset opacity of the new image to 0
+                gsap.set(imgRef.current, { opacity: 0 });
+                
                 // Change image source
                 setImageSrc(newSrc);
 
-                // Reset opacity of the new image to 0
-                gsap.set(imgRef.current, { opacity: 0 });
 
                 // Fade in animation
                 gsap.to(imgRef.current, {
