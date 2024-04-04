@@ -412,7 +412,7 @@
 .block__content {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -428,12 +428,10 @@
   height: auto;
   max-width: 250px;
   width: 100%;
-  margin-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .block__samurai {
     max-width: 300px;
-    margin-right: 8rem;
   }
 }
 .block__classes-wrapper {

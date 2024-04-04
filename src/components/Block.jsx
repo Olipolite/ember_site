@@ -29,7 +29,7 @@ const Block = () => {
             blockRef.current,
             {
                 opacity: 0,
-                y: -50,
+                y: -25,
             },
             {
                 y: 0,
@@ -52,7 +52,7 @@ const Block = () => {
             onComplete: () => {
                 // Reset opacity of the new image to 0
                 gsap.set(imgRef.current, { opacity: 0 });
-                
+
                 // Change image source
                 setImageSrc(newSrc);
 
@@ -95,6 +95,14 @@ const Block = () => {
         gsap.to(borderRefBottomLeftBlue.current, { duration: 0.3, opacity: '0.9', borderBottom: '10px solid white', borderRight: '10px solid rgba(30, 197, 227)' });
     };
 
+    const classTitle = {
+        [Samurai]: "Warrior",
+        [BlueSamurai]: "Bowmaster",
+        [BlackWhiteSamurai]: "Thief",
+        [BlackWhiteMaleSamurai]: "Magician",
+        [SamuraiCool]: "Brawler",
+    }
+
     return (
         <div className="block">
             <div className="block__container" ref={blockRef}>
@@ -115,7 +123,10 @@ const Block = () => {
                 </div>
 
                 <div className="block__content">
-                    <img className="block__samurai" ref={imgRef} src={imageSrc} alt="Samurai"></img>
+                    <div>
+                        <img className="block__samurai" ref={imgRef} src={imageSrc} alt="Samurai"></img>
+                        <p className="block__samurai-title">{classTitle[imageSrc]}</p>
+                    </div>
                     <div className="block__classes-wrapper">
                         <div className="block__classes-carousel">
                             <div>
