@@ -5,6 +5,7 @@ import News from './pages/News';
 import BetaPage from './pages/BetaPage';
 import GameInfo from './pages/GameInfo';
 import PlayNow from './pages/PlayNow';
+import ScrollToTop from './components/ScrollToTop';
 
 
 import Navbar from './components/Navbar';
@@ -31,6 +32,7 @@ function App() {
         <div>
             <Navbar links={links} handleBurgerMenu={handleBurgerMenu} />
             <MobileMenu links={links} isOpen={openMenu} handleCloseMobileMenu={handleBurgerMenu} />
+            <ScrollToTop />
             <Routes>
                 <Route path="/ember_site" element={<Home />} />
                 <Route path="/news" element={<News />} />
