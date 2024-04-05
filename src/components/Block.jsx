@@ -15,10 +15,18 @@ import Thief from '../assets/icons_classes/ThiefIcon.png';
 import Magician from '../assets/icons_classes/MageIcon.png';
 import Brawler from '../assets/icons_classes/BrawlerIcon.png';
 
+import WarriorVideo from '../assets/block_gif/Warrior_temp.gif';
+import MageVideo from '../assets/block_gif/Mage_temp.gif';
+import BrawlerVideo from '../assets/block_gif/Brawler_temp.gif';
+import ArcherVideo from '../assets/block_gif/Archer_temp.gif';
+import ThiefVideo from '../assets/block_gif/fernando-bordon-sprite-0001.gif';
+
 const Block = () => {
     const imgRef = useRef(null);
+    const gifRef = useRef(null);
     const blockCircleRef = useRef(null);
     const [imageSrc, setImageSrc] = useState(Samurai);
+    const [gifSrc, setGifSrc] = useState(WarriorVideo);
 
     const blockRef = useRef(null);
 
@@ -44,21 +52,24 @@ const Block = () => {
         );
     }, []);
 
-    const handleClassesIcon = (newSrc) => {
+    const handleClassesIcon = (newSrc, newGifSrc) => {
+        console.log("New GIF source:", newGifSrc);
         // Fade out animation img
-        gsap.to(imgRef.current, {
+        gsap.to([imgRef.current, gifRef.current], {
             opacity: 0,
             duration: 0.5,
             onComplete: () => {
+                
                 // Reset opacity of the new image to 0
-                gsap.set(imgRef.current, { opacity: 0 });
-
+                gsap.set([imgRef.current, gifRef.current], { opacity: 0 });
+                
                 // Change image source
+                setGifSrc(newGifSrc);
                 setImageSrc(newSrc);
 
 
                 // Fade in animation
-                gsap.to(imgRef.current, {
+                gsap.to([imgRef.current, gifRef.current], {
                     opacity: 1,
                     duration: 0.5,
                 });
@@ -103,6 +114,14 @@ const Block = () => {
         [SamuraiCool]: "Brawler",
     }
 
+    const classGif = {
+        [Samurai]: "https://forums.tigsource.com/index.php?topic=42569.280",
+        [BlueSamurai]: "https://dribbble.com/shots/2415428-The-Archer",
+        [BlackWhiteSamurai]: "https://www.artstation.com/artwork/Zae83Z",
+        [BlackWhiteMaleSamurai]: "",
+        [SamuraiCool]: ""
+    }
+
     return (
         <div className="block">
             <div className="block__container" ref={blockRef}>
@@ -127,38 +146,44 @@ const Block = () => {
                         <img className="block__samurai" ref={imgRef} src={imageSrc} alt="Samurai"></img>
                         <p className="block__samurai-title">{classTitle[imageSrc]}</p>
                     </div>
-                    <div className="block__classes-wrapper">
-                        <div className="block__classes-carousel">
-                            <div>
-                                <div className={imageSrc === Samurai ? 'block__circle' : 'block__circle block__circle-hidden'} ref={blockCircleRef} onClick={() => handleClassesIcon(Samurai)}>
-                                    <img src={Warrior} alt="icon" className="block__icon" />
+                    <div className="block__wrapper">
+                        <div className="block__classes-wrapper">
+                            <div className="block__classes-carousel">
+                                <div>
+                                    <div className={imageSrc === Samurai ? 'block__circle' : 'block__circle block__circle-hidden'} ref={blockCircleRef} onClick={() => handleClassesIcon(Samurai, WarriorVideo)}>
+                                        <img src={Warrior} alt="icon" className="block__icon" />
+                                    </div>
+                                    <p>Warrior</p>
                                 </div>
-                                <p>Warrior</p>
-                            </div>
-                            <div>
-                                <div className={imageSrc === BlueSamurai ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(BlueSamurai)}>
-                                    <img src={Bowmaster} alt="icon" className="block__icon" />
+                                <div>
+                                    <div className={imageSrc === BlueSamurai ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(BlueSamurai, ArcherVideo )}>
+                                        <img src={Bowmaster} alt="icon" className="block__icon" />
+                                    </div>
+                                    <p>Bowmaster</p>
                                 </div>
-                                <p>Bowmaster</p>
-                            </div>
-                            <div>
-                                <div className={imageSrc === BlackWhiteSamurai ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(BlackWhiteSamurai)}>
-                                    <img src={Thief} alt="icon" className="block__icon" />
+                                <div>
+                                    <div className={imageSrc === BlackWhiteSamurai ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(BlackWhiteSamurai, ThiefVideo)}>
+                                        <img src={Thief} alt="icon" className="block__icon" />
+                                    </div>
+                                    <p>Thief</p>
                                 </div>
-                                <p>Thief</p>
-                            </div>
-                            <div>
-                                <div className={imageSrc === BlackWhiteMaleSamurai ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(BlackWhiteMaleSamurai)}>
-                                    <img src={Magician} alt="icon" className="block__icon" />
+                                <div>
+                                    <div className={imageSrc === BlackWhiteMaleSamurai ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(BlackWhiteMaleSamurai, MageVideo)}>
+                                        <img src={Magician} alt="icon" className="block__icon" />
+                                    </div>
+                                    <p>Magician</p>
                                 </div>
-                                <p>Magician</p>
-                            </div>
-                            <div>
-                                <div className={imageSrc === SamuraiCool ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(SamuraiCool)}>
-                                    <img src={Brawler} alt="icon" className="block__icon" />
+                                <div>
+                                    <div className={imageSrc === SamuraiCool ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(SamuraiCool, BrawlerVideo)}>
+                                        <img src={Brawler} alt="icon" className="block__icon" />
+                                    </div>
+                                    <p>Brawler</p>
                                 </div>
-                                <p>Brawler</p>
                             </div>
+                        </div>
+                        <div className="block__video-classes">
+                            <img src={gifSrc} alt="ClassGif" ref={gifRef} ></img>
+                            <a href={classGif[imageSrc]} target="_blank" rel="noreferrer" alt="">Credit</a>
                         </div>
                     </div>
                 </div>
