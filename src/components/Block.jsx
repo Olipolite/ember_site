@@ -180,8 +180,11 @@ const Block = () => {
                             </div>
                         </div>
                         <div className="block__video-classes">
-                            <img src={gifSrc} alt="WarriorGif"></img>
-                            <a href={classGif[imageSrc]} rel="" target="_noblank">Source</a>
+                            <div className="block__video-classes__item">
+                                <img src={gifSrc} alt="WarriorGif"></img>
+                                <span className="block__video-classes__border"></span>
+                            </div>
+                                <a href={classGif[imageSrc]} rel="" target="_noblank">Credit</a>
                         </div>
                     </div>
                 </div>
