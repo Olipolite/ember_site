@@ -7,7 +7,7 @@
         display: flex;
         justify-content: flex-end;
         height: 100%;
-        padding: 0 0.5rem;
+        padding: 0 0.7rem;
     }
 
     &__image { 
@@ -40,8 +40,12 @@
         margin-top: 5rem;
         margin-right: 0;
         padding-top: 3rem;
+
+        @include mixin.media ('md') {
+            margin-right: 8rem;
+        }
         
-        @include   mixin.media('md') {
+        @include   mixin.media('xl') {
             margin-right: 15rem;
         }
         

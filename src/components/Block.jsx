@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import handleButtonClick from '../functions/helper-functions';
 
@@ -53,28 +53,25 @@ const Block = () => {
     }, []);
 
     const handleClassesIcon = (newSrc, newGifSrc) => {
-        console.log("New GIF source:", newGifSrc);
         // Fade out animation img
-        gsap.to([imgRef.current, gifRef.current], {
+        gsap.to(imgRef.current, {
             opacity: 0,
             duration: 0.5,
             onComplete: () => {
-                
                 // Reset opacity of the new image to 0
-                gsap.set([imgRef.current, gifRef.current], { opacity: 0 });
-                
+                gsap.set(imgRef.current, { opacity: 0 });
+
                 // Change image source
-                setGifSrc(newGifSrc);
                 setImageSrc(newSrc);
 
-
                 // Fade in animation
-                gsap.to([imgRef.current, gifRef.current], {
+                gsap.to(imgRef.current, {
                     opacity: 1,
                     duration: 0.5,
                 });
             },
         });
+        setGifSrc(newGifSrc);
     };
 
     // Probably could do with some refactoring :3
@@ -107,20 +104,20 @@ const Block = () => {
     };
 
     const classTitle = {
-        [Samurai]: "Warrior",
-        [BlueSamurai]: "Bowmaster",
-        [BlackWhiteSamurai]: "Thief",
-        [BlackWhiteMaleSamurai]: "Magician",
-        [SamuraiCool]: "Brawler",
-    }
+        [Samurai]: 'WARRIOR',
+        [BlueSamurai]: 'BOWMASTER',
+        [BlackWhiteSamurai]: 'THIEF',
+        [BlackWhiteMaleSamurai]: 'MAGICIAN',
+        [SamuraiCool]: 'BRAWLER',
+    };
 
     const classGif = {
-        [Samurai]: "https://forums.tigsource.com/index.php?topic=42569.280",
-        [BlueSamurai]: "https://dribbble.com/shots/2415428-The-Archer",
-        [BlackWhiteSamurai]: "https://www.artstation.com/artwork/Zae83Z",
-        [BlackWhiteMaleSamurai]: "",
-        [SamuraiCool]: ""
-    }
+        [Samurai]: 'https://forums.tigsource.com/index.php?topic=42569.280',
+        [BlueSamurai]: 'https://dribbble.com/shots/2415428-The-Archer',
+        [BlackWhiteSamurai]: 'https://www.artstation.com/artwork/Zae83Z',
+        [BlackWhiteMaleSamurai]: '',
+        [SamuraiCool]: '',
+    };
 
     return (
         <div className="block">
@@ -145,6 +142,7 @@ const Block = () => {
                     <div>
                         <img className="block__samurai" ref={imgRef} src={imageSrc} alt="Samurai"></img>
                         <p className="block__samurai-title">{classTitle[imageSrc]}</p>
+                        <p className="block__samurai-description">Ipsum dolore esse minim mollit velit.</p>
                     </div>
                     <div className="block__wrapper">
                         <div className="block__classes-wrapper">
@@ -156,7 +154,7 @@ const Block = () => {
                                     <p>Warrior</p>
                                 </div>
                                 <div>
-                                    <div className={imageSrc === BlueSamurai ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(BlueSamurai, ArcherVideo )}>
+                                    <div className={imageSrc === BlueSamurai ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(BlueSamurai, ArcherVideo)}>
                                         <img src={Bowmaster} alt="icon" className="block__icon" />
                                     </div>
                                     <p>Bowmaster</p>
@@ -182,8 +180,8 @@ const Block = () => {
                             </div>
                         </div>
                         <div className="block__video-classes">
-                            <img src={gifSrc} alt="ClassGif" ref={gifRef} ></img>
-                            <a href={classGif[imageSrc]} target="_blank" rel="noreferrer" alt="">Credit</a>
+                            <img src={gifSrc} alt="WarriorGif"></img>
+                            <a href={classGif[imageSrc]} rel="" target="_noblank">Source</a>
                         </div>
                     </div>
                 </div>

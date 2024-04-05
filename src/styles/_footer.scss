@@ -97,7 +97,11 @@
         position: absolute;
         top: 0.5rem;
         right: 2rem;
-        max-width: 220px;
+        max-width: 110px;
         width: 100%;
+        
+        @include mixin.media('md') {
+            max-width: 220px;
+        }
     }
 }

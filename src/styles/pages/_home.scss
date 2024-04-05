@@ -16,11 +16,15 @@
         top: 0;
         left: 0;
         object-fit: cover;
-        object-position: 45% 75%;
+        object-position: 8% 75%;
         z-index: -1;
         height: 100%;
         max-width: 100%;
         width: 100%;
+
+        @include mixin.media ('md') {
+            object-position: 45% 75%;
+        }
     }
 
     &__content {
