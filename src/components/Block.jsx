@@ -25,6 +25,7 @@ const Block = () => {
     const imgRef = useRef(null);
     const [imageSrc, setImageSrc] = useState(Samurai);
     const [gifSrc, setGifSrc] = useState(WarriorVideo);
+    const [imagesLoaded, setImagesLoaded] = useState(false);
 
     const blockRef = useRef(null);
 
@@ -48,6 +49,30 @@ const Block = () => {
             }
         );
     }, []);
+
+    useEffect(() => {
+        const imagesToPreload = [
+            Samurai,
+            BlueSamurai,
+            BlackWhiteSamurai,
+            BlackWhiteMaleSamurai,
+            SamuraiCool,
+        ];
+
+        const preloadedImages = imagesToPreload.map(src => {
+            const image = new Image();
+            image.src = src;
+            return image;
+        });
+
+        Promise.all(preloadedImages.map(image => new Promise(resolve => {
+            image.onload = resolve;
+        }))).then(() => {
+            setImagesLoaded(true);
+        });
+    }, []);
+
+    
 
     const handleClassesIcon = (newSrc, newGifSrc) => {
         gsap.to(imgRef.current, {
