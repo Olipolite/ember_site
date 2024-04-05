@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/ember_site/static/css/main.013d5bc8.css",
-    "main.js": "/ember_site/static/js/main.46972393.js",
+    "main.css": "/ember_site/static/css/main.fc720b33.css",
+    "main.js": "/ember_site/static/js/main.d5542dc1.js",
     "static/media/Warrior_temp.gif": "/ember_site/static/media/Warrior_temp.bc7cd1a2925ced20703d.gif",
+    "static/media/Warrior_two.gif": "/ember_site/static/media/Warrior_two.11d7064763522366d3a5.gif",
     "static/media/Mage_temp.gif": "/ember_site/static/media/Mage_temp.91acc84c899e85ec2be5.gif",
     "static/media/Brawler_temp.gif": "/ember_site/static/media/Brawler_temp.0e88189a014bbcd7c09c.gif",
+    "static/media/testy.png": "/ember_site/static/media/testy.b125a58dbb9ff4cc3401.png",
     "static/media/dragon.jpg": "/ember_site/static/media/dragon.237d3485d5dcdf82605f.jpg",
     "static/media/fernando-bordon-sprite-0001.gif": "/ember_site/static/media/fernando-bordon-sprite-0001.b8cc50c101787491c872.gif",
     "static/media/Archer_temp.gif": "/ember_site/static/media/Archer_temp.4b199607fbec45ebe3df.gif",
@@ -16,12 +18,13 @@
     "static/media/blue-smurai-blackwhite.png": "/ember_site/static/media/blue-smurai-blackwhite.f1ff89764e300f4f1f3f.png",
     "static/media/samurai-blacak-white.png": "/ember_site/static/media/samurai-blacak-white.6ccff2396c0d6aef6ff3.png",
     "static/media/godot_logo.png": "/ember_site/static/media/godot_logo.008cd6b1041d85822dda.png",
+    "static/media/placeholder.jpeg": "/ember_site/static/media/placeholder.f14e1536da7d899bdd08.jpeg",
     "index.html": "/ember_site/index.html",
-    "main.013d5bc8.css.map": "/ember_site/static/css/main.013d5bc8.css.map",
-    "main.46972393.js.map": "/ember_site/static/js/main.46972393.js.map"
+    "main.fc720b33.css.map": "/ember_site/static/css/main.fc720b33.css.map",
+    "main.d5542dc1.js.map": "/ember_site/static/js/main.d5542dc1.js.map"
   },
   "entrypoints": [
-    "static/css/main.013d5bc8.css",
-    "static/js/main.46972393.js"
+    "static/css/main.fc720b33.css",
+    "static/js/main.d5542dc1.js"
   ]
 }
