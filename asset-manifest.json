@@ -1,21 +1,27 @@
 {
   "files": {
-    "main.css": "/ember_site/static/css/main.63f88225.css",
-    "main.js": "/ember_site/static/js/main.9f0e5458.js",
+    "main.css": "/ember_site/static/css/main.013d5bc8.css",
+    "main.js": "/ember_site/static/js/main.46972393.js",
+    "static/media/Warrior_temp.gif": "/ember_site/static/media/Warrior_temp.bc7cd1a2925ced20703d.gif",
+    "static/media/Mage_temp.gif": "/ember_site/static/media/Mage_temp.91acc84c899e85ec2be5.gif",
+    "static/media/Brawler_temp.gif": "/ember_site/static/media/Brawler_temp.0e88189a014bbcd7c09c.gif",
     "static/media/dragon.jpg": "/ember_site/static/media/dragon.237d3485d5dcdf82605f.jpg",
+    "static/media/fernando-bordon-sprite-0001.gif": "/ember_site/static/media/fernando-bordon-sprite-0001.b8cc50c101787491c872.gif",
+    "static/media/Archer_temp.gif": "/ember_site/static/media/Archer_temp.4b199607fbec45ebe3df.gif",
+    "static/media/Register - Login.gif": "/ember_site/static/media/Register - Login.d32b4a8500a4c74fddd1.gif",
     "static/media/blue-smurai.png": "/ember_site/static/media/blue-smurai.4447de20ceb2dfe46114.png",
     "static/media/samurai_cool.png": "/ember_site/static/media/samurai_cool.3af866c87d59c1948a6a.png",
     "static/media/samurai.png": "/ember_site/static/media/samurai.5a51d405ba67f9cbd9ec.png",
-    "static/media/hunter.jpg": "/ember_site/static/media/hunter.64e774aba8eb55f33380.jpg",
     "static/media/moon_boy.jpg": "/ember_site/static/media/moon_boy.10281f1b13394cf91944.jpg",
     "static/media/blue-smurai-blackwhite.png": "/ember_site/static/media/blue-smurai-blackwhite.f1ff89764e300f4f1f3f.png",
     "static/media/samurai-blacak-white.png": "/ember_site/static/media/samurai-blacak-white.6ccff2396c0d6aef6ff3.png",
+    "static/media/godot_logo.png": "/ember_site/static/media/godot_logo.008cd6b1041d85822dda.png",
     "index.html": "/ember_site/index.html",
-    "main.63f88225.css.map": "/ember_site/static/css/main.63f88225.css.map",
-    "main.9f0e5458.js.map": "/ember_site/static/js/main.9f0e5458.js.map"
+    "main.013d5bc8.css.map": "/ember_site/static/css/main.013d5bc8.css.map",
+    "main.46972393.js.map": "/ember_site/static/js/main.46972393.js.map"
   },
   "entrypoints": [
-    "static/css/main.63f88225.css",
-    "static/js/main.9f0e5458.js"
+    "static/css/main.013d5bc8.css",
+    "static/js/main.46972393.js"
   ]
 }
