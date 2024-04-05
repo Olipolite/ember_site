@@ -41,7 +41,7 @@ const MobileMenu = ({ links, isOpen, handleCloseMobileMenu }) => {
                 <div className="mobile-menu__links">
                     {links.map((link) => (
                         <li key={link.id} className="mobile-menu__link">
-                            <Link to={link.name} onClick={handleCloseMobileMenu} >{link.name}</Link>
+                            <Link to={link.path} onClick={handleCloseMobileMenu} >{link.name}</Link>
                         </li>
                     ))}
                 </div>

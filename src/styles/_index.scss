@@ -1,9 +1,14 @@
 @use 'mixin';
 @use 'vars';
 
+//pages
 @import './pages/home';
 @import './pages/beta-page';
+@import './pages/game-info';
+@import './pages/news-page';
+@import './pages/account';
 
+//components
 @import 'navbar';
 @import 'mobile-menu';
 @import 'block';

@@ -21,7 +21,7 @@ function App() {
 
     const links = [
         { id: 0, name: 'News', path: '/news' },
-        { id: 1, name: 'Game Info', path: '/game_info' },
+        { id: 1, name: 'Game Info', path: '/game-info' },
         { id: 2, name: 'Beta', path: '/beta' },
         { id: 3, name: 'Account', path: '/account' },
         { id: 4, name: 'Play Now', path: '/play_now' },
@@ -34,7 +34,7 @@ function App() {
             <Routes>
                 <Route path="/ember_site" element={<Home />} />
                 <Route path="/news" element={<News />} />
-                <Route path="/game_info" element={<GameInfo />} />
+                <Route path="/game-info" element={<GameInfo />} />
                 <Route path="/beta" element={<BetaPage />} />
                 <Route path="/account" element={<Account />} />
                 <Route path="/play_now" element={<PlayNow />} />

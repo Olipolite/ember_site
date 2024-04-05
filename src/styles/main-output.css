@@ -107,6 +107,57 @@
   z-index: -1;
 }
 
+.game {
+  width: 100%;
+}
+.game__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 98vh;
+}
+.game img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: 65% 35%;
+  z-index: -1;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.news__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+}
+.news__container img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 300px;
+}
+
+.account__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+}
+.account__container img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 350px;
+}
+
 .navbar {
   position: fixed;
   top: 0;

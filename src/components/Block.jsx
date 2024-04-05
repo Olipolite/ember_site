@@ -23,7 +23,6 @@ import ThiefVideo from '../assets/block_gif/fernando-bordon-sprite-0001.gif';
 
 const Block = () => {
     const imgRef = useRef(null);
-    const blockCircleRef = useRef(null);
     const [imageSrc, setImageSrc] = useState(Samurai);
     const [gifSrc, setGifSrc] = useState(WarriorVideo);
 

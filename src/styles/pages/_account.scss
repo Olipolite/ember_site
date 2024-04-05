@@ -1,0 +1,18 @@
+.account {
+
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 98vh;
+
+        img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            width: 350px;
+        }
+    }
+}
