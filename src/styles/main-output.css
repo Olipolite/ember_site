@@ -281,7 +281,7 @@
 }
 @media screen and (min-width: 768px) {
   .block {
-    height: 100vh;
+    height: 100%;
   }
 }
 .block__container {
@@ -289,7 +289,7 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
-  max-width: 1280px;
+  max-width: 1650px;
   width: 100%;
   margin: 1rem auto 1.5rem auto;
   padding: 2rem 0.8rem;
@@ -298,7 +298,7 @@
 @media screen and (min-width: 768px) {
   .block__container {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 3rem;
     text-align: left;
   }
 }
@@ -348,7 +348,7 @@
   max-height: 32px;
   height: 100%;
   width: 100%;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -435,9 +435,9 @@
   max-width: 250px;
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .block__samurai {
-    max-width: 300px;
+    max-width: 500px;
   }
 }
 .block__samurai-title {
@@ -496,7 +496,7 @@
   margin-top: 0.2rem;
 }
 .block__circle {
-  visibility: visible;
+  visibility: visable;
   background-color: transparent;
   width: 75px;
   height: 75px;
@@ -530,6 +530,20 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 3rem;
+}
+.block__video-classes__item {
+  position: relative;
+  max-width: 375px;
+  width: 100%;
+  max-height: 200px;
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .block__video-classes__item {
+    max-width: 450px;
+    max-height: 250px;
+  }
 }
 .block__video-classes img {
   object-fit: cover;
@@ -539,26 +553,19 @@
 }
 @media screen and (min-width: 768px) {
   .block__video-classes img {
-    max-width: 375px;
+    max-height: 250px;
   }
-}
-.block__video-classes__item {
-  position: relative;
-  max-width: 375px;
-  width: 100%;
-  max-height: 200px;
-  height: 100%;
 }
 .block__video-classes__border {
   position: absolute;
-  top: -10px;
+  top: -12px;
   left: 10px;
   height: 110%;
   width: 95%;
   border: 1px solid gray;
 }
 .block__video-classes a {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   font-size: 0.75rem;
   text-align: left;
   color: #000000;

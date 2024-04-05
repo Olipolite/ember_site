@@ -23,7 +23,6 @@ import ThiefVideo from '../assets/block_gif/fernando-bordon-sprite-0001.gif';
 
 const Block = () => {
     const imgRef = useRef(null);
-    const gifRef = useRef(null);
     const blockCircleRef = useRef(null);
     const [imageSrc, setImageSrc] = useState(Samurai);
     const [gifSrc, setGifSrc] = useState(WarriorVideo);
@@ -32,7 +31,6 @@ const Block = () => {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-
         gsap.fromTo(
             blockRef.current,
             {
@@ -53,18 +51,12 @@ const Block = () => {
     }, []);
 
     const handleClassesIcon = (newSrc, newGifSrc) => {
-        // Fade out animation img
         gsap.to(imgRef.current, {
             opacity: 0,
             duration: 0.5,
             onComplete: () => {
-                // Reset opacity of the new image to 0
                 gsap.set(imgRef.current, { opacity: 0 });
-
-                // Change image source
                 setImageSrc(newSrc);
-
-                // Fade in animation
                 gsap.to(imgRef.current, {
                     opacity: 1,
                     duration: 0.5,
@@ -119,6 +111,45 @@ const Block = () => {
         [SamuraiCool]: '',
     };
 
+    const classData = [
+        {
+          image: Samurai,
+          video: WarriorVideo,
+          icon: Warrior,
+          name: 'Warrior',
+          description: 'Masters of close combat, warriors are strong and resilient fighters skilled with a variety of melee weapons.'
+        },
+        {
+          image: BlueSamurai,
+          video: ArcherVideo,
+          icon: Bowmaster,
+          name: 'Bowmaster',
+          description: 'Bowmasters are expert marksmen, skilled in long-range combat. They specialize in raining arrows down on their enemies from afar.'
+        },
+        {
+          image: BlackWhiteSamurai,
+          video: ThiefVideo,
+          icon: Thief,
+          name: 'Thief',
+          description: 'Thieves are nimble and agile, specializing in stealth and subterfuge. They excel at slipping past enemies unnoticed and striking from the shadows.'
+        },
+        {
+          image: BlackWhiteMaleSamurai,
+          video: MageVideo,
+          icon: Magician,
+          name: 'Magician',
+          description: 'Magicians wield powerful magic to manipulate the elements and cast devastating spells on their foes. They are masters of arcane knowledge.'
+        },
+        {
+          image: SamuraiCool,
+          video: BrawlerVideo,
+          icon: Brawler,
+          name: 'Brawler',
+          description: 'Brawlers are fearless fighters who rely on their brute strength and close-quarters combat skills to overpower their adversaries. They excel in hand-to-hand combat.'
+        }
+      ];
+      
+
     return (
         <div className="block">
             <div className="block__container" ref={blockRef}>
@@ -147,36 +178,14 @@ const Block = () => {
                     <div className="block__wrapper">
                         <div className="block__classes-wrapper">
                             <div className="block__classes-carousel">
-                                <div>
-                                    <div className={imageSrc === Samurai ? 'block__circle' : 'block__circle block__circle-hidden'} ref={blockCircleRef} onClick={() => handleClassesIcon(Samurai, WarriorVideo)}>
-                                        <img src={Warrior} alt="icon" className="block__icon" />
+                                {classData.map((classItem, index) => (
+                                    <div key={index}>
+                                        <div className={imageSrc === classItem.image ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(classItem.image, classItem.video)}>
+                                            <img src={classItem.icon} alt="icon" className="block__icon" />
+                                        </div>
+                                        <p>{classItem.name}</p>
                                     </div>
-                                    <p>Warrior</p>
-                                </div>
-                                <div>
-                                    <div className={imageSrc === BlueSamurai ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(BlueSamurai, ArcherVideo)}>
-                                        <img src={Bowmaster} alt="icon" className="block__icon" />
-                                    </div>
-                                    <p>Bowmaster</p>
-                                </div>
-                                <div>
-                                    <div className={imageSrc === BlackWhiteSamurai ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(BlackWhiteSamurai, ThiefVideo)}>
-                                        <img src={Thief} alt="icon" className="block__icon" />
-                                    </div>
-                                    <p>Thief</p>
-                                </div>
-                                <div>
-                                    <div className={imageSrc === BlackWhiteMaleSamurai ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(BlackWhiteMaleSamurai, MageVideo)}>
-                                        <img src={Magician} alt="icon" className="block__icon" />
-                                    </div>
-                                    <p>Magician</p>
-                                </div>
-                                <div>
-                                    <div className={imageSrc === SamuraiCool ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(SamuraiCool, BrawlerVideo)}>
-                                        <img src={Brawler} alt="icon" className="block__icon" />
-                                    </div>
-                                    <p>Brawler</p>
-                                </div>
+                                ))}
                             </div>
                         </div>
                         <div className="block__video-classes">
@@ -184,7 +193,9 @@ const Block = () => {
                                 <img src={gifSrc} alt="WarriorGif"></img>
                                 <span className="block__video-classes__border"></span>
                             </div>
-                                <a href={classGif[imageSrc]} rel="" target="_noblank">Credit</a>
+                            <a href={classGif[imageSrc]} rel="" target="_noblank">
+                                Credit
+                            </a>
                         </div>
                     </div>
                 </div>
