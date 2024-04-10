@@ -3,7 +3,7 @@
     height: 300px;
 
     @include mixin.media ('md') {
-        height: 55vh;
+        height: 45vh;
     }
 
     &__container {

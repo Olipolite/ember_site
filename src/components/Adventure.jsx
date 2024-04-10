@@ -1,7 +1,4 @@
 import React from "react";
-import AdventureOne from "../assets/adventure1.png";
-import AdventureTwo from "../assets/adventure2.png";
-import AdventureThree from "../assets/Adventure3.jpeg";
 import AdventureFour from "../assets/adventure4.png";
 
 const Adventure = () => {

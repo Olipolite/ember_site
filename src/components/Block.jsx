@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import handleButtonClick from '../functions/helper-functions';
 
 // Portraits
+import WarriorTest from "../assets/portraits_classes/Warrior_Paladin.png"
 import Samurai from '../assets/portraits_classes/samurai.png';
 import BlueSamurai from '../assets/portraits_classes/blue-smurai.png';
 import BlackWhiteSamurai from '../assets/portraits_classes/samurai-blacak-white.png';
@@ -27,7 +28,7 @@ import ThiefVideo from '../assets/block_gif/fernando-bordon-sprite-0001.gif';
 
 const Block = () => {
     const imgRef = useRef(null);
-    const [imageSrc, setImageSrc] = useState(Samurai);
+    const [imageSrc, setImageSrc] = useState(WarriorTest);
     const [gifSrc, setGifSrc] = useState(WarriorVideo);
     const [imagesLoaded, setImagesLoaded] = useState(false);
 
@@ -143,7 +144,7 @@ const Block = () => {
 
     const classData = [
         {
-          image: Samurai,
+          image: WarriorTest,
           video: WarriorVideo,
           icon: Warrior,
           name: 'Warrior',
