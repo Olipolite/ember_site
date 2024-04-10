@@ -825,10 +825,90 @@
   background-color: rgb(241, 145, 1);
 }
 
+.adventure {
+  background-color: #0F141E;
+  height: 300px;
+}
+@media screen and (min-width: 768px) {
+  .adventure {
+    height: 55vh;
+  }
+}
 .adventure__container {
-  height: 35vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding: 0 0.5rem;
+  overflow: hidden;
   font-family: "Noto Sans HK", sans-serif;
   color: white;
+}
+@media screen and (min-width: 768px) {
+  .adventure__container {
+    justify-content: space-between;
+    padding: 0 2.5rem;
+  }
+}
+.adventure__text {
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 2rem;
+}
+.adventure__title {
+  margin: 0;
+  line-height: 1;
+  font-family: "Noto Sans HK", sans-serif;
+  font-size: 2rem;
+  color: #868281;
+}
+@media screen and (min-width: 768px) {
+  .adventure__title {
+    font-size: 5rem;
+  }
+}
+.adventure__sub {
+  margin: 0;
+  line-height: 1;
+  font-family: "Noto Sans HK", sans-serif;
+  font-size: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .adventure__sub {
+    font-size: 8rem;
+  }
+}
+.adventure__btn {
+  max-height: 35px;
+  max-width: 135px;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .adventure__btn {
+    max-height: 55px;
+    max-width: 185px;
+    font-size: 1rem;
+  }
+}
+.adventure img {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  object-position: 3% 25%;
+  width: 100%;
+  height: 300px;
+  object-fit: none;
+}
+@media screen and (min-width: 768px) {
+  .adventure img {
+    object-position: 100% 25%;
+    height: 55vh;
+  }
 }
 
 /*# sourceMappingURL=main-output.css.map */
