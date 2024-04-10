@@ -1,12 +1,13 @@
 import React from "react";
+
+// Components
 import Block from "../components/Block";
 import BetaBlock from "../components/BetaBlock";
+import Adventure from "../components/Adventure";
 
 import handleButtonClick from '../functions/helper-functions';
-import "../styles/main-output.css";
-// import heroImage from "../assets/hero_image.png";
-// import test from "../assets/test.png";
 import login from "../assets/block_gif/Register - Login.gif";
+import "../styles/main-output.css";
 
 
 
@@ -27,6 +28,7 @@ const Home = () => {
             </div>
             <Block />
             <BetaBlock />
+            <Adventure />
         </div>
     );
 }

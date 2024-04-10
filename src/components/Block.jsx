@@ -4,17 +4,21 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import handleButtonClick from '../functions/helper-functions';
 
+// Portraits
 import Samurai from '../assets/portraits_classes/samurai.png';
 import BlueSamurai from '../assets/portraits_classes/blue-smurai.png';
 import BlackWhiteSamurai from '../assets/portraits_classes/samurai-blacak-white.png';
 import BlackWhiteMaleSamurai from '../assets/portraits_classes/blue-smurai-blackwhite.png';
 import SamuraiCool from '../assets/portraits_classes/samurai_cool.png';
+
+// Icons
 import Warrior from '../assets/icons_classes/WarriorIcon.png';
 import Bowmaster from '../assets/icons_classes/ArcherIcon.png';
 import Thief from '../assets/icons_classes/ThiefIcon.png';
 import Magician from '../assets/icons_classes/MageIcon.png';
 import Brawler from '../assets/icons_classes/BrawlerIcon.png';
 
+// Block GIFs
 import WarriorVideo from '../assets/block_gif/Warrior_temp.gif';
 import MageVideo from '../assets/block_gif/Mage_temp.gif';
 import BrawlerVideo from '../assets/block_gif/Brawler_temp.gif';
@@ -50,6 +54,8 @@ const Block = () => {
         );
     }, []);
 
+
+    // image preload
     useEffect(() => {
         const imagesToPreload = [
             Samurai,

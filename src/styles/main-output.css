@@ -825,4 +825,10 @@
   background-color: rgb(241, 145, 1);
 }
 
+.adventure__container {
+  height: 35vh;
+  font-family: "Noto Sans HK", sans-serif;
+  color: white;
+}
+
 /*# sourceMappingURL=main-output.css.map */

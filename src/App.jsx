@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Pages
 import Home from './pages/Home';
 import News from './pages/News';
 import BetaPage from './pages/BetaPage';
 import GameInfo from './pages/GameInfo';
 import PlayNow from './pages/PlayNow';
+import Account from './pages/Account';
+
+//Components
 import ScrollToTop from './components/ScrollToTop';
-
-
 import Navbar from './components/Navbar';
 import MobileMenu from './components/MobileMenu';
 import Footer from './components/Footer';
-import Account from './pages/Account';
 
 function App() {
     const [openMenu, setOpenMenu] = useState(false);
