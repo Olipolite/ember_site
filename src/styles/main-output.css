@@ -950,4 +950,82 @@
   }
 }
 
+.newsblock {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+@media screen and (min-width: 768px) {
+  .newsblock {
+    height: 90vh;
+  }
+}
+.newsblock__container {
+  width: 100%;
+  padding: 0 1rem;
+}
+.newsblock__container h1 {
+  margin: 0;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  font-family: "Noto Sans HK", sans-serif;
+  font-size: 2.775rem;
+  line-height: 1;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .newsblock__container h1 {
+    font-size: 8rem;
+  }
+}
+.newsblock__card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .newsblock__card-wrapper {
+    flex-direction: row;
+  }
+}
+.newsblock__card {
+  position: relative;
+  border: 1px solid gray;
+  padding: 0.5rem;
+  padding-top: 0;
+  max-width: 425px;
+  width: 100%;
+  max-height: 350px;
+  height: 100%;
+  margin: 0;
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .newsblock__card {
+    margin: 2rem;
+    margin-top: 7rem;
+  }
+}
+.newsblock .card__thumbnail {
+  object-fit: cover;
+  object-position: center 40%;
+  height: 175px;
+  width: 100%;
+}
+.newsblock .card__paragraph {
+  padding: 0 1rem;
+  height: 125px;
+  font-family: "Noto Sans HK", sans-serif;
+  font-size: 0.875rem;
+}
+.newsblock .card__border {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgb(241, 145, 1);
+}
+
 /*# sourceMappingURL=main-output.css.map */

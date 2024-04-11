@@ -4,6 +4,7 @@ import React from "react";
 import Block from "../components/Block";
 import BetaBlock from "../components/BetaBlock";
 import Adventure from "../components/Adventure";
+import NewsBlock from "../components/NewsBlock";
 
 import handleButtonClick from '../functions/helper-functions';
 import login from "../assets/block_gif/Register - Login.gif";
@@ -28,6 +29,7 @@ const Home = () => {
             </div>
             <Block />
             <BetaBlock />
+            <NewsBlock />
             <Adventure />
         </div>
     );

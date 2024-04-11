@@ -78,7 +78,10 @@ const Block = () => {
     useEffect(() => {
         const imagesToPreload = [
             WarriorTest,
-
+            ThiefEmber,
+            MageEmber,
+            BrawlerEmber,
+            yamiyami,
         ];
 
         const preloadedImages = imagesToPreload.map(src => {
