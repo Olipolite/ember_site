@@ -5,12 +5,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import handleButtonClick from '../functions/helper-functions';
 
 // Portraits
-import WarriorTest from "../assets/portraits_classes/Warrior_Paladin.png"
-import Samurai from '../assets/portraits_classes/samurai.png';
-import BlueSamurai from '../assets/portraits_classes/blue-smurai.png';
-import BlackWhiteSamurai from '../assets/portraits_classes/samurai-blacak-white.png';
-import BlackWhiteMaleSamurai from '../assets/portraits_classes/blue-smurai-blackwhite.png';
-import SamuraiCool from '../assets/portraits_classes/samurai_cool.png';
+import WarriorTest from "../assets/portraits_classes/Warrior_Paladin.png";
+import BowMasterTest from "../assets/portraits_classes/Bowmaster.jpeg";
+import ThiefEmber from "../assets/portraits_classes/ember_thief.jpeg";
+import MageEmber from "../assets/portraits_classes/ember_mage.jpeg";
+import BrawlerEmber from "../assets/portraits_classes/ember_brawler.jpeg";
+import yamiyami from "../assets/portraits_classes/yami-yami-5.jpg";
 
 // Icons
 import Warrior from '../assets/icons_classes/WarriorIcon.png';
@@ -34,6 +34,25 @@ const Block = () => {
 
     const blockRef = useRef(null);
 
+
+    const borderRef = useRef(null);
+    const animationRef = useRef(null);
+
+    useEffect(() => {
+        const portraitElement = borderRef.current;
+
+        animationRef.current = gsap.to(portraitElement, {
+            rotation: 360,
+            duration: 10,
+            repeat: -1,
+            ease: "linear",
+        });
+
+        return () => {
+            animationRef.current.kill();
+        };
+    }, []);
+
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
         gsap.fromTo(
@@ -55,15 +74,11 @@ const Block = () => {
         );
     }, []);
 
-
     // image preload
     useEffect(() => {
         const imagesToPreload = [
-            Samurai,
-            BlueSamurai,
-            BlackWhiteSamurai,
-            BlackWhiteMaleSamurai,
-            SamuraiCool,
+            WarriorTest,
+
         ];
 
         const preloadedImages = imagesToPreload.map(src => {
@@ -79,7 +94,6 @@ const Block = () => {
         });
     }, []);
 
-    
 
     const handleClassesIcon = (newSrc, newGifSrc) => {
         gsap.to(imgRef.current, {
@@ -127,19 +141,15 @@ const Block = () => {
     };
 
     const classTitle = {
-        [Samurai]: 'WARRIOR',
-        [BlueSamurai]: 'BOWMASTER',
-        [BlackWhiteSamurai]: 'THIEF',
-        [BlackWhiteMaleSamurai]: 'MAGICIAN',
-        [SamuraiCool]: 'BRAWLER',
+        [WarriorTest]: 'WARRIOR',
+        [yamiyami]: 'BOWMASTER',
+        [ThiefEmber]: 'THIEF',
+        [MageEmber]: 'MAGICIAN',
+        [BrawlerEmber]: 'BRAWLER',
     };
 
     const classGif = {
-        [Samurai]: 'https://forums.tigsource.com/index.php?topic=42569.280',
-        [BlueSamurai]: 'https://dribbble.com/shots/2415428-The-Archer',
-        [BlackWhiteSamurai]: 'https://www.artstation.com/artwork/Zae83Z',
-        [BlackWhiteMaleSamurai]: '',
-        [SamuraiCool]: '',
+
     };
 
     const classData = [
@@ -151,35 +161,34 @@ const Block = () => {
           description: 'Masters of close combat, warriors are strong and resilient fighters skilled with a variety of melee weapons.'
         },
         {
-          image: BlueSamurai,
+          image: yamiyami,
           video: ArcherVideo,
           icon: Bowmaster,
           name: 'Bowmaster',
           description: 'Bowmasters are expert marksmen, skilled in long-range combat. They specialize in raining arrows down on their enemies from afar.'
         },
         {
-          image: BlackWhiteSamurai,
+          image: ThiefEmber,
           video: ThiefVideo,
           icon: Thief,
           name: 'Thief',
           description: 'Thieves are nimble and agile, specializing in stealth and subterfuge. They excel at slipping past enemies unnoticed and striking from the shadows.'
         },
         {
-          image: BlackWhiteMaleSamurai,
+          image: MageEmber,
           video: MageVideo,
           icon: Magician,
           name: 'Magician',
           description: 'Magicians wield powerful magic to manipulate the elements and cast devastating spells on their foes. They are masters of arcane knowledge.'
         },
         {
-          image: SamuraiCool,
+          image: BrawlerEmber,
           video: BrawlerVideo,
           icon: Brawler,
           name: 'Brawler',
           description: 'Brawlers are fearless fighters who rely on their brute strength and close-quarters combat skills to overpower their adversaries. They excel in hand-to-hand combat.'
         }
-      ];
-      
+    ];
 
     return (
         <div className="block">
@@ -201,10 +210,12 @@ const Block = () => {
                 </div>
 
                 <div className="block__content">
-                    <div>
+                    <div className="block__samurai-wrapper">
                         <img className="block__samurai" ref={imgRef} src={imageSrc} alt="Samurai"></img>
                         <p className="block__samurai-title">{classTitle[imageSrc]}</p>
                         <p className="block__samurai-description">Ipsum dolore esse minim mollit velit.</p>
+                        <div className="block__samurai-border" ref={borderRef}></div>
+                        <div className="block__samurai-border--two"></div>
                     </div>
                     <div className="block__wrapper">
                         <div className="block__classes-wrapper">
