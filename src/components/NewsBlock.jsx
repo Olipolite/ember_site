@@ -76,7 +76,10 @@ const NewsBlock = () => {
     return (
         <div className="newsblock">
             <div className="newsblock__container">
-                <h1 ref={newsBlockTitle}>NEWS</h1>
+                <div className="newsblock__title-wrapper">
+                    <h1 className="newsblock__title" ref={newsBlockTitle}>NEWS</h1>
+                    <div className="newsblock__part-underline"></div>
+                </div>
                 <div className="newsblock__card-wrapper">
                     <div className="newsblock__card" ref={cardOneRef}>
                         <img className="card__thumbnail" alt="" src={Placeholder}></img>
