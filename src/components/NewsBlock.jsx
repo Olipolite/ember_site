@@ -85,6 +85,7 @@ const NewsBlock = () => {
                         <img className="card__thumbnail" alt="" src={Placeholder}></img>
                         <p className="card__paragraph">Commodo magna cupidatat do consequat consectetur incididunt ut. JORDEL CHAD</p>
                         <div className="card__border"></div>
+                        <span className="card__corner-cut"></span>
                     </div>
                     <div className="newsblock__card" ref={cardTwoRef}>
                         <img className="card__thumbnail" alt="" src={Placeholder}></img>
