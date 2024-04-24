@@ -1072,14 +1072,14 @@
 }
 .newsblock .card__corner-cut:after {
   position: absolute;
-  bottom: 0; /* Start from the bottom */
+  bottom: 0;
   display: block;
   content: "";
-  height: 25px; /* Half the size of .card__corner-cut */
-  width: 25px; /* Half the size of .card__corner-cut */
+  height: 25px;
+  width: 25px;
   border-left: 1px solid black;
-  border-top: 1px solid black; /* Change to border-top */
-  transform: rotate(-90deg); /* Rotate the pseudo-element */
+  border-top: 1px solid black;
+  transform: rotate(-90deg);
 }
 
 /*# sourceMappingURL=main-output.css.map */
