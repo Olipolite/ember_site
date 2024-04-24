@@ -27,16 +27,19 @@ import ArcherVideo from '../assets/block_gif/Archer_temp.gif';
 import ThiefVideo from '../assets/block_gif/fernando-bordon-sprite-0001.gif';
 
 const Block = () => {
+    // State
     const imgRef = useRef(null);
     const [imageSrc, setImageSrc] = useState(WarriorTest);
     const [gifSrc, setGifSrc] = useState(WarriorVideo);
     const [imagesLoaded, setImagesLoaded] = useState(false);
+    const [selectedIconIndex, setSelectedIconIndex] = useState(0); 
 
+
+    // Refs
     const blockRef = useRef(null);
-
-
     const borderRef = useRef(null);
     const animationRef = useRef(null);
+    const iconRefs = useRef([]);
 
     useEffect(() => {
         const portraitElement = borderRef.current;
@@ -98,20 +101,37 @@ const Block = () => {
     }, []);
 
 
-    const handleClassesIcon = (newSrc, newGifSrc) => {
-        gsap.to(imgRef.current, {
-            opacity: 0,
-            duration: 0.5,
-            onComplete: () => {
-                gsap.set(imgRef.current, { opacity: 0 });
-                setImageSrc(newSrc);
-                gsap.to(imgRef.current, {
-                    opacity: 1,
-                    duration: 0.5,
+    const handleClassesPortrait = (newSrc, newGifSrc, index) => {
+        setSelectedIconIndex(prevIndex => {
+            // Fade in the clicked icon
+            iconRefs.current.forEach((ref, i) => {
+                gsap.to(ref, {
+                    opacity: i === index ? 1 : 0.5,
+                    scale: i === index ? 1.3 : 1,
+                    ease: "linear",
+                    duration: 0.1,
                 });
-            },
+            });
+    
+            // Update image and GIF source
+            gsap.to(imgRef.current, {
+                opacity: 0,
+                duration: 0.5,
+                onComplete: () => {
+                    gsap.set(imgRef.current, { opacity: 0 });
+                    setImageSrc(newSrc);
+                    gsap.to(imgRef.current, {
+                        opacity: 1,
+                        duration: 0.5,
+                    });
+                },
+            });
+    
+            setGifSrc(newGifSrc);
+    
+            // Return the updated index
+            return index;
         });
-        setGifSrc(newGifSrc);
     };
 
     // Probably could do with some refactoring :3
@@ -152,7 +172,6 @@ const Block = () => {
     };
 
     const classGif = {
-
     };
 
     const classData = [
@@ -193,6 +212,11 @@ const Block = () => {
         }
     ];
 
+    // Sets initial image, video and icon selected.
+    useEffect(() => {
+        handleClassesPortrait(classData[0].image, classData[0].video, 0);
+    }, []); 
+
     return (
         <div className="block">
             <div className="block__container" ref={blockRef}>
@@ -225,8 +249,10 @@ const Block = () => {
                             <div className="block__classes-carousel">
                                 {classData.map((classItem, index) => (
                                     <div key={index}>
-                                        <div className={imageSrc === classItem.image ? 'block__circle' : 'block__circle block__circle-hidden'} onClick={() => handleClassesIcon(classItem.image, classItem.video)}>
-                                            <img src={classItem.icon} alt="icon" className="block__icon" />
+                                        <div className={imageSrc === classItem.image ? 'block__circle' : 'block__circle block__circle-hidden'}
+                                        onClick={() => handleClassesPortrait(classItem.image, classItem.video, index)}
+                                    >
+                                        <img className="block__icon" src={classItem.icon} ref={ref => (iconRefs.current[index] = ref)} alt="icon" />
                                         </div>
                                         <p>{classItem.name}</p>
                                     </div>

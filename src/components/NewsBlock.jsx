@@ -82,12 +82,7 @@ const NewsBlock = () => {
                 top: 0,
                 right: 0,
                 background: 'transparent',
-                borderLeft: '0px',
-                borderBottom: '0px',
                 duration: 0.5,
-                onComplete: () => {
-                    gsap.set(cornerCutRef.current, { borderLeft: '0px', borderBottom: '0px' });
-                }
             }
         )
     };
@@ -102,9 +97,6 @@ const NewsBlock = () => {
                 right: '-25',
                 background: 'white',
                 duration: 0.5,
-                onComplete: () => {
-                    gsap.set(cornerCutRef.current, { borderLeft: '0px', borderBottom: '0px' });
-                }
             }
         )
     };
