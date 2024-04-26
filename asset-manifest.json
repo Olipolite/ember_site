@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ember_site/static/css/main.76b25f5e.css",
-    "main.js": "/ember_site/static/js/main.1c5ef725.js",
+    "main.css": "/ember_site/static/css/main.0ce257df.css",
+    "main.js": "/ember_site/static/js/main.9cc20559.js",
     "static/media/Warrior_temp.gif": "/ember_site/static/media/Warrior_temp.bc7cd1a2925ced20703d.gif",
     "static/media/Warrior_two.gif": "/ember_site/static/media/Warrior_two.11d7064763522366d3a5.gif",
     "static/media/Mage_temp.gif": "/ember_site/static/media/Mage_temp.91acc84c899e85ec2be5.gif",
@@ -23,11 +23,11 @@
     "static/media/godot_logo.png": "/ember_site/static/media/godot_logo.008cd6b1041d85822dda.png",
     "static/media/placeholder.jpeg": "/ember_site/static/media/placeholder.f14e1536da7d899bdd08.jpeg",
     "index.html": "/ember_site/index.html",
-    "main.76b25f5e.css.map": "/ember_site/static/css/main.76b25f5e.css.map",
-    "main.1c5ef725.js.map": "/ember_site/static/js/main.1c5ef725.js.map"
+    "main.0ce257df.css.map": "/ember_site/static/css/main.0ce257df.css.map",
+    "main.9cc20559.js.map": "/ember_site/static/js/main.9cc20559.js.map"
   },
   "entrypoints": [
-    "static/css/main.76b25f5e.css",
-    "static/js/main.1c5ef725.js"
+    "static/css/main.0ce257df.css",
+    "static/js/main.9cc20559.js"
   ]
 }
