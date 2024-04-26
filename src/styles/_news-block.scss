@@ -13,12 +13,14 @@
         flex-direction: column;
         width: 100%;
         padding: 0 1rem;
+        padding-bottom: 2rem;
 
         .newsblock__title-wrapper {
             display: flex;
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
+            position: relative;
         }
 
         h1 {
@@ -34,6 +36,17 @@
                 font-size: 8rem;    
             }
         }
+    }
+
+    &__title-animation {
+        position: absolute;
+        top: 15px;
+        right: -75px;
+        height: 150px;
+        width: 50px;
+        background-color: white;
+        transform: rotate(25deg);
+        z-index: 2;
     }
 
     &__part-underline {
@@ -74,6 +87,7 @@
         margin-bottom: 4rem;
         padding: 0.5rem;
         padding-top: 0;
+        cursor: pointer;
 
         @include mixin.media('md') {
             margin: 2rem;
@@ -104,25 +118,25 @@
         border: 1px solid $orange;
     }
 
-    .card__corner-cut {
-        position: absolute;
-        height: 50px;
-        width: 50px;
-        top: -25px;
-        right: -25px;
-        background: white;
-        z-index: 5;
+    // .card__corner-cut {
+    //     position: absolute;
+    //     height: 50px;
+    //     width: 50px;
+    //     top: -25px;
+    //     right: -25px;
+    //     background: white;
+    //     z-index: 5;
     
-        &:after {
-            position: absolute;
-            bottom: 0;
-            display: block;
-            content: "";
-            height: 25px;
-            width: 25px;
-            border-left: 1px solid black;
-            border-top: 1px solid black;
-            transform: rotate(-90deg); 
-        }
-    }
+    //     &:after {
+    //         position: absolute;
+    //         bottom: 0;
+    //         display: block;
+    //         content: "";
+    //         height: 25px;
+    //         width: 25px;
+    //         border-left: 1px solid black;
+    //         border-top: 1px solid black;
+    //         transform: rotate(-90deg); 
+    //     }
+    // }
 }
