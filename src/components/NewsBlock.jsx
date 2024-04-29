@@ -12,7 +12,7 @@ const NewsBlock = () => {
 
     const newsBlockTitle = useRef(null);
 
-    // //Title Animation
+    // //Title Animation old
     // useEffect(() => {
     //     gsap.registerPlugin(ScrollTrigger);
     //     gsap.fromTo(
@@ -34,6 +34,8 @@ const NewsBlock = () => {
     //     );
     // }, []);
 
+
+    
     //New Title Animation
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);

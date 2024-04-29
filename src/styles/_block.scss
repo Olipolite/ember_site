@@ -29,6 +29,10 @@
         }
     }
 
+    &__title-wrapper {
+        position: relative;
+    }
+
     &__title {
         margin: 0;
         font-family: $footer-font;
@@ -47,6 +51,7 @@
             font-family: $footer-font;
             font-size: 2.775rem;
             line-height: 1;
+            text-align: center;
             font-style: oblique 60deg;
 
             @include mixin.media('md') {
@@ -54,7 +59,19 @@
                 margin-bottom: 0;
             }
         }
+
+        &-animation {
+            position: absolute;
+            right: -20px;
+            bottom: 60px;
+            height: 150px;
+            width: 50px;
+            background-color: #ffff;
+            transform: rotate(25deg);
+            z-index: 2;
+        }
     }
+
 
     &__paragraph {
         max-width: 580px;

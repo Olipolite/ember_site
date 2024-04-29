@@ -353,6 +353,9 @@
     text-align: left;
   }
 }
+.block__title-wrapper {
+  position: relative;
+}
 .block__title {
   margin: 0;
   font-family: "Noto Sans HK", sans-serif;
@@ -372,6 +375,7 @@
   font-family: "Noto Sans HK", sans-serif;
   font-size: 2.775rem;
   line-height: 1;
+  text-align: center;
   font-style: oblique 60deg;
 }
 @media screen and (min-width: 768px) {
@@ -379,6 +383,16 @@
     font-size: 8rem;
     margin-bottom: 0;
   }
+}
+.block__title-animation {
+  position: absolute;
+  right: -20px;
+  bottom: 60px;
+  height: 150px;
+  width: 50px;
+  background-color: white;
+  transform: rotate(25deg);
+  z-index: 2;
 }
 .block__paragraph {
   max-width: 580px;

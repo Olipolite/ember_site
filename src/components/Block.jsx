@@ -40,6 +40,7 @@ const Block = () => {
     const borderRef = useRef(null);
     const animationRef = useRef(null);
     const iconRefs = useRef([]);
+    const blockTitle = useRef(null);
 
     useEffect(() => {
         const portraitElement = borderRef.current;
@@ -56,26 +57,28 @@ const Block = () => {
         };
     }, []);
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.fromTo(
-            blockRef.current,
-            {
-                opacity: 0,
-                y: -25,
-            },
-            {
-                y: 0,
-                opacity: 1,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: blockRef.current,
-                    start: 'top 80%',
-                    toggleActions: 'play none none none',
-                },
-            }
-        );
-    }, []);
+    // TitleAnimation old
+    // useEffect(() => {
+    //     gsap.registerPlugin(ScrollTrigger);
+    //     gsap.fromTo(
+    //         blockRef.current,
+    //         {
+    //             opacity: 0,
+    //             y: -25,
+    //         },
+    //         {
+    //             y: 0,
+    //             opacity: 1,
+    //             duration: 1,
+    //             scrollTrigger: {
+    //                 trigger: blockRef.current,
+    //                 start: 'top 80%',
+    //                 toggleActions: 'play none none none',
+    //             },
+    //         }
+    //     );
+    // }, []);
+
 
     // image preload
     useEffect(() => {
@@ -100,6 +103,29 @@ const Block = () => {
         });
     }, []);
 
+    //  Title Animation
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.fromTo(
+            blockTitle.current,
+            {
+                x: -500,
+            },
+            {
+                x: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: blockTitle.current,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none',
+                    ease: 'linear',
+                },
+                onComplete: () => {
+                    gsap.set(blockTitle.current, { backgroundColor: 'transparent' });
+                },
+            }
+        );
+    });
 
     const handleClassesPortrait = (newSrc, newGifSrc, index) => {
         setSelectedIconIndex(prevIndex => {
@@ -220,9 +246,12 @@ const Block = () => {
     return (
         <div className="block">
             <div className="block__container" ref={blockRef}>
-                <p className="block__title">CHOOSE YOUR</p>
-                <h2 className="block__title-hero">HERO!</h2>
-                <p className="block__paragraph">Proident ullamco enim excepteur non duis adipisicing Lorem. Qui est incididunt commodo aute esse tempor fugiat aliqua exercitation id magna.</p>
+                <div className="block__title-wrapper">
+                    <p className="block__title">CHOOSE YOUR</p>
+                    <h2 className="block__title-hero">HERO!</h2>
+                    <div className="block__title-animation" ref={blockTitle}></div>
+                    <p className="block__paragraph">Proident ullamco enim excepteur non duis adipisicing Lorem. Qui est incididunt commodo aute esse tempor fugiat aliqua exercitation id magna.</p>
+                </div>
                 <div className="block__button-wrapper">
                     <button ref={buttonRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="block__btn block__btn-orange">
                         Talent Calculator

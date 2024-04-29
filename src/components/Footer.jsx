@@ -14,13 +14,13 @@ const Footer = ({ links }) => {
     return (
         <div className="footer">
             <div className="footer__container">
-                <nav className="footer__links">
+                <ul className="footer__links">
                     {links.map((link) => (
                         <li key={link.id} className="footer__link">
                             <Link to={link.path}>{link.name}</Link>
                         </li>
                     ))}
-                </nav>
+                </ul>
             </div>
                 <div className="footer__copyright">
                     <div className="footer__copyright--container">

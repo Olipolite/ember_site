@@ -38,13 +38,13 @@ const MobileMenu = ({ links, isOpen, handleCloseMobileMenu }) => {
                     <h2>IKOL</h2>
                 </div>
             </Link>
-                <div className="mobile-menu__links">
+                <ul className="mobile-menu__links">
                     {links.map((link) => (
                         <li key={link.id} className="mobile-menu__link">
                             <Link to={link.path} onClick={handleCloseMobileMenu} >{link.name}</Link>
                         </li>
                     ))}
-                </div>
+                </ul>
             </div>
         </div>
     );
