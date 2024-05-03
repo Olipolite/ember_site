@@ -10,6 +10,69 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+.account {
+  background-color: #f6f6f6;
+}
+.account__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+}
+.account__container img {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.beta-page__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 98vh;
+  padding-top: 2rem;
+}
+.beta-page__dragon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 15% 50%;
+  z-index: -1;
+}
+
+.game {
+  width: 100%;
+}
+.game__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 98vh;
+}
+.game__container h1 {
+  font-family: "Noto Sans HK", sans-serif;
+  color: white;
+}
+.game img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: 65% 35%;
+  z-index: -1;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
 .hero__gradient {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 }
@@ -88,46 +151,6 @@
   width: 20px;
 }
 
-.beta-page__container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  height: 98vh;
-  padding-top: 2rem;
-}
-.beta-page__dragon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-height: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 15% 50%;
-  z-index: -1;
-}
-
-.game {
-  width: 100%;
-}
-.game__container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  height: 98vh;
-}
-.game img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  object-position: 65% 35%;
-  z-index: -1;
-  height: 100%;
-  max-width: 100%;
-  width: 100%;
-}
-
 .news__container {
   position: relative;
   display: flex;
@@ -141,21 +164,6 @@
   align-items: center;
   height: 200px;
   width: 300px;
-}
-
-.account__container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 98vh;
-}
-.account__container img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 250px;
-  width: 350px;
 }
 
 .navbar {
@@ -1082,6 +1090,50 @@
   height: 100%;
   width: 100%;
   border: 1px solid rgb(241, 145, 1);
+}
+
+.register-account {
+  background: rgba(0, 0, 0, 0.39);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  width: 500px;
+  color: black;
+}
+.register-account form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+}
+.register-account__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.register-account__section label {
+  width: 100%;
+  text-align: left;
+}
+.register-account__section input {
+  width: 100%;
+  height: 2rem;
+}
+.register-account__section button {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  max-width: none;
+  width: 100%;
+  height: 2rem;
 }
 
 /*# sourceMappingURL=main-output.css.map */

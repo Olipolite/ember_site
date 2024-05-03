@@ -2,11 +2,11 @@
 @use 'vars';
 
 //pages
-@import './pages/home';
-@import './pages/beta-page';
-@import './pages/game-info';
-@import './pages/news-page';
-@import './pages/account';
+@import 'pages/account';
+@import 'pages/beta-page';
+@import 'pages/game-info';
+@import 'pages/home';
+@import 'pages/news-page';
 
 //components
 @import 'navbar';
@@ -16,3 +16,4 @@
 @import 'beta-block';
 @import 'adventure';
 @import 'news-block';
+@import 'register-account';

@@ -1,11 +1,13 @@
 import React from "react";
-import palceholder from "../assets/placeholder.jpeg";
+import RegisterAccount from "../components/RegisterAccount";
+import placeholder from '../assets/testy.png';
 
 const Account = () => {
     return (
         <div className="account">
             <div className="account__container">
-                <img src={palceholder} alt="ninja"></img>
+                <img src={placeholder} alt="Background colorful nature" ></img>
+                <RegisterAccount />
             </div>
         </div>
     )
