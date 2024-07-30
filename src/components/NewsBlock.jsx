@@ -10,6 +10,9 @@ const NewsBlock = () => {
     const cardTwoRef = useRef(null);
     const cornerCutRef = useRef(null);
 
+    const cardThumbNailOne = useRef(null);
+    const cardThumbNailTwo = useRef(null);
+
     const newsBlockTitle = useRef(null);
 
     // //Title Animation old
@@ -113,6 +116,32 @@ const NewsBlock = () => {
         });
     }, []);
 
+    // Hover Card Animation
+    const handleMouseEnterCard = () => {
+        gsap.to(cardThumbNailOne.current, {
+            scale: 1.05,
+        })
+    }
+
+    const handleMouseLeaveCard = () => {
+        gsap.to(cardThumbNailOne.current, {
+            scale: 1,
+        })
+    }
+
+    //Hover Card Animation 2
+    const handleMouseEnterCardTwo = () => {
+        gsap.to(cardThumbNailTwo.current, {
+            scale: 1.05,
+        })
+    }
+
+    const handleMouseLeaveCardTwo = () => {
+        gsap.to(cardThumbNailTwo.current, {
+            scale: 1,
+        })
+    }
+
     return (
         <div className="newsblock">
             <div className="newsblock__container">
@@ -124,17 +153,29 @@ const NewsBlock = () => {
                     <div className="newsblock__part-underline"></div>
                 </div>
                 <div className="newsblock__card-wrapper">
-                    <div className="newsblock__card" ref={cardOneRef}>
-                        <img className="card__thumbnail" alt="" src={Placeholder}></img>
-                        <p className="card__paragraph">Commodo magna cupidatat do consequat consectetur incididunt ut. Eiusmod aute incididunt non et anim ut id cupidatat commodo. Proident quis aliquip reprehenderit aliquip eiusmod quis fugiat aliquip officia irure occaecat officia. JORDEL CHAD</p>
-                        <div className="card__border"></div>
-                        <span className="card__corner-cut" ref={cornerCutRef}></span>
+                    <div id="card-one" className="newsblock__card" onMouseEnter={handleMouseEnterCard} onMouseLeave={handleMouseLeaveCard} ref={cardOneRef}>
+                        <div class="card__thumbnail-wrapper">
+                            <img className="card__thumbnail" alt="" src={Placeholder} ref={cardThumbNailOne}></img>
+                        </div>
+                        <div className="newsblock__card-content">
+                            <p className="card__date">DEV TALK | 3 Months Ago</p>
+                            <h2 className="card__title">Behind the scenes</h2>
+                            <p className="card__paragraph">Commodo magna cupidatat do consequat consectetur incididunt ut. Eiusmod aute incididunt non et anim ut id cupidatat commodo. Proident quis aliquip reprehenderit aliquip eiusmod quis fugiat aliquip officia irure occaecat officia. JORDEL CHAD</p>
+                            <div className="card__border"></div>
+                            <span className="card__corner-cut" ref={cornerCutRef}></span>
+                        </div>
                     </div>
-                    <div className="newsblock__card" ref={cardTwoRef}>
-                        <img className="card__thumbnail" alt="" src={Placeholder}></img>
-                        <p className="card__paragraph">Commodo magna cupidatat do consequat consectetur incididunt ut. PLEASE BUFF WARRIOR PLEASE // BASSE</p>
-                        <div className="card__border"></div>
-                        <span className="card__corner-cut" ref={cornerCutRef}></span>
+                    <div className="newsblock__card" onMouseEnter={handleMouseEnterCardTwo} onMouseLeave={handleMouseLeaveCardTwo} ref={cardTwoRef}>
+                        <div class="card__thumbnail-wrapper">
+                            <img className="card__thumbnail" alt="" src={Placeholder} ref={cardThumbNailTwo}></img>
+                        </div>
+                        <div class="newsblock__card-content">
+                            <p className="card__date">DEV TALK | 3 Months Ago</p>
+                            <h2 className="card__title">Behind the scenes</h2>
+                            <p className="card__paragraph">Commodo magna cupidatat do consequat consectetur incididunt ut. PLEASE BUFF WARRIOR PLEASE // BASSE</p>
+                            <div className="card__border"></div>
+                            <span className="card__corner-cut" ref={cornerCutRef}></span>
+                        </div>
                     </div>
                 </div>
             </div>
