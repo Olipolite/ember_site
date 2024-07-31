@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/ember_site/static/css/main.0ce257df.css",
-    "main.js": "/ember_site/static/js/main.9cc20559.js",
+    "main.css": "/ember_site/static/css/main.45698353.css",
+    "main.js": "/ember_site/static/js/main.0f3414e3.js",
+    "static/media/temp-background-image.png": "/ember_site/static/media/temp-background-image.22ac58577c057a6433a8.png",
     "static/media/Warrior_temp.gif": "/ember_site/static/media/Warrior_temp.bc7cd1a2925ced20703d.gif",
     "static/media/Warrior_two.gif": "/ember_site/static/media/Warrior_two.11d7064763522366d3a5.gif",
     "static/media/Mage_temp.gif": "/ember_site/static/media/Mage_temp.91acc84c899e85ec2be5.gif",
@@ -10,24 +11,22 @@
     "static/media/dragon.jpg": "/ember_site/static/media/dragon.237d3485d5dcdf82605f.jpg",
     "static/media/adventure4.png": "/ember_site/static/media/adventure4.072a205bb4278676bfe5.png",
     "static/media/fernando-bordon-sprite-0001.gif": "/ember_site/static/media/fernando-bordon-sprite-0001.b8cc50c101787491c872.gif",
+    "static/media/background_temp.gif": "/ember_site/static/media/background_temp.1aa71d77439864826578.gif",
     "static/media/Warrior_Paladin.png": "/ember_site/static/media/Warrior_Paladin.ba2b165d08b650f30b5d.png",
     "static/media/Archer_temp.gif": "/ember_site/static/media/Archer_temp.4b199607fbec45ebe3df.gif",
-    "static/media/Register - Login.gif": "/ember_site/static/media/Register - Login.d32b4a8500a4c74fddd1.gif",
     "static/media/yami-yami-5.jpg": "/ember_site/static/media/yami-yami-5.a85f929355a6edd9217b.jpg",
-    "static/media/samurai_cool.png": "/ember_site/static/media/samurai_cool.3af866c87d59c1948a6a.png",
     "static/media/moon_boy.jpg": "/ember_site/static/media/moon_boy.10281f1b13394cf91944.jpg",
     "static/media/ember_thief.jpeg": "/ember_site/static/media/ember_thief.0d17659f224bedff4874.jpeg",
     "static/media/ember_brawler.jpeg": "/ember_site/static/media/ember_brawler.54f3542ce5df6d70d1c0.jpeg",
-    "static/media/Bowmaster.jpeg": "/ember_site/static/media/Bowmaster.c1ebe1da670682255400.jpeg",
+    "static/media/dev_temp.jpeg": "/ember_site/static/media/dev_temp.fed39fc711db57518ae2.jpeg",
     "static/media/ember_mage.jpeg": "/ember_site/static/media/ember_mage.084b65eda7d3e445b193.jpeg",
     "static/media/godot_logo.png": "/ember_site/static/media/godot_logo.008cd6b1041d85822dda.png",
-    "static/media/placeholder.jpeg": "/ember_site/static/media/placeholder.f14e1536da7d899bdd08.jpeg",
     "index.html": "/ember_site/index.html",
-    "main.0ce257df.css.map": "/ember_site/static/css/main.0ce257df.css.map",
-    "main.9cc20559.js.map": "/ember_site/static/js/main.9cc20559.js.map"
+    "main.45698353.css.map": "/ember_site/static/css/main.45698353.css.map",
+    "main.0f3414e3.js.map": "/ember_site/static/js/main.0f3414e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ce257df.css",
-    "static/js/main.9cc20559.js"
+    "static/css/main.45698353.css",
+    "static/js/main.0f3414e3.js"
   ]
 }
