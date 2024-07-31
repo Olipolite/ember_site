@@ -5,10 +5,9 @@
     background: #ffff;
     overflow: hidden;
     height: 100%;
-    opacity: 0.9;
 
     @include mixin.media('md') {
-        height: 120vh;
+        height: 105vh;
     }
 
     &__container {
@@ -63,8 +62,8 @@
         &-animation {
             position: absolute;
             right: -20px;
-            bottom: 60px;
-            height: 150px;
+            bottom: 45px;
+            height: 170px;
             width: 50px;
             background-color: #ffff;
             transform: rotate(25deg);

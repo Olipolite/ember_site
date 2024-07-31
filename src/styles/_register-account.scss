@@ -1,4 +1,4 @@
-.register-account {
+.login-account {
     background: rgba(0, 0, 0, 0.39);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -8,16 +8,32 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 400px;
+    max-height: 500px;
+    height: 100%;
     width: 500px;
-    color: black;
+    color: white;
+
+    h5 {
+        font-size: 3rem;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
 
     form {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 250px;
+        width: 300px;
+        margin-bottom: 3.5rem;
+        transition: none;
+
+        .btn {
+            transition: none;
+            &:hover {
+                transform: none;
+            }
+        }
     }
 
     &__section {
@@ -44,5 +60,9 @@
             width: 100%;
             height: 2rem;
         }
+    }
+
+    &__register-link {
+        color: #fff;
     }
 }

@@ -6,7 +6,6 @@ import handleButtonClick from '../functions/helper-functions';
 
 // Portraits
 import WarriorTest from "../assets/portraits_classes/Warrior_Paladin.png";
-import BowMasterTest from "../assets/portraits_classes/Bowmaster.jpeg";
 import ThiefEmber from "../assets/portraits_classes/ember_thief.jpeg";
 import MageEmber from "../assets/portraits_classes/ember_mage.jpeg";
 import BrawlerEmber from "../assets/portraits_classes/ember_brawler.jpeg";
@@ -32,7 +31,7 @@ const Block = () => {
     const [imageSrc, setImageSrc] = useState(WarriorTest);
     const [gifSrc, setGifSrc] = useState(WarriorVideo);
     const [imagesLoaded, setImagesLoaded] = useState(false);
-    const [selectedIconIndex, setSelectedIconIndex] = useState(0); 
+    const [selectedIconIndex, setSelectedIconIndex] = useState(0);
 
 
     // Refs
@@ -249,7 +248,7 @@ const Block = () => {
                 <div className="block__title-wrapper">
                     <p className="block__title">CHOOSE YOUR</p>
                     <h2 className="block__title-hero">HERO!</h2>
-                    <div className="block__title-animation" ref={blockTitle}></div>
+                    <span className="block__title-animation" ref={blockTitle}></span>
                     <p className="block__paragraph">Proident ullamco enim excepteur non duis adipisicing Lorem. Qui est incididunt commodo aute esse tempor fugiat aliqua exercitation id magna.</p>
                 </div>
                 <div className="block__button-wrapper">

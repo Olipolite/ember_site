@@ -25,9 +25,9 @@ const Footer = ({ links }) => {
                 <div className="footer__copyright">
                     <div className="footer__copyright--container">
                     <Link to='/ember_site'>
-                        <p className="footer__logo">IKOL</p>
+                        <span className="footer__logo">IKOL</span>
                     </Link>
-                        <p className="footer__scroll" onClick={scrollToTop}>BACK TO TOP</p>
+                        <span className="footer__scroll" onClick={scrollToTop}>BACK TO TOP</span>
                     </div>
                     <img className="godot" src={Godot} alt="godot"></img>
                 </div>

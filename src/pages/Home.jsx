@@ -7,7 +7,7 @@ import Adventure from "../components/Adventure";
 import NewsBlock from "../components/NewsBlock";
 
 import handleButtonClick from '../functions/helper-functions';
-import login from "../assets/block_gif/Register - Login.gif";
+import LandScapeTest from "../assets/temp-background-image.png";
 import "../styles/main-output.css";
 
 
@@ -18,7 +18,7 @@ const Home = () => {
             <div className="hero">
                 <div className="hero__gradient">
                     <div className="hero__container">
-                        <img className="hero__image" src={login} alt="wow!"></img>
+                        <img className="hero__image" src={LandScapeTest} alt="wow!"></img>
                         <div className="hero__content">
                             <h1 className="hero__title">Ember</h1>
                             <p className="hero__paragraph">RPG - FREE TO PLAY</p>

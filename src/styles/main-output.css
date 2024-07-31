@@ -89,7 +89,6 @@
   top: 0;
   left: 0;
   object-fit: cover;
-  object-position: 8% 75%;
   z-index: -1;
   height: 100%;
   max-width: 100%;
@@ -338,11 +337,10 @@
   background: white;
   overflow: hidden;
   height: 100%;
-  opacity: 0.9;
 }
 @media screen and (min-width: 768px) {
   .block {
-    height: 120vh;
+    height: 105vh;
   }
 }
 .block__container {
@@ -397,8 +395,8 @@
 .block__title-animation {
   position: absolute;
   right: -20px;
-  bottom: 60px;
-  height: 150px;
+  bottom: 45px;
+  height: 170px;
   width: 50px;
   background-color: white;
   transform: rotate(25deg);
@@ -874,7 +872,7 @@
   opacity: 1;
   margin-top: 4rem;
   background-color: rgb(241, 145, 1);
-  color: aliceblue;
+  color: #000000;
   max-width: 200px;
   max-height: 35px;
   font-size: 0.8rem;
@@ -985,7 +983,7 @@
 }
 @media screen and (min-width: 768px) {
   .newsblock {
-    height: 90vh;
+    height: 80vh;
   }
 }
 .newsblock__container {
@@ -1056,7 +1054,6 @@
 }
 .newsblock__card {
   position: relative;
-  border: 1px solid black;
   max-width: 425px;
   width: 100%;
   height: 450px;
@@ -1069,11 +1066,11 @@
 @media screen and (min-width: 768px) {
   .newsblock__card {
     margin: 2rem;
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
 }
 .newsblock__card-content {
-  padding: 0 1rem;
+  padding: 0 10px 0 0;
   font-family: "IBM Plex Serif", serif;
 }
 .newsblock .card__thumbnail {
@@ -1087,24 +1084,20 @@
 }
 .newsblock .card__date {
   margin: 0;
+  font-size: 0.75rem;
 }
 .newsblock .card__title {
-  margin: 0;
+  margin: 0.5rem 0;
+  font-family: "Noto Sans HK", sans-serif;
 }
 .newsblock .card__paragraph {
+  margin: 0;
   font-family: "Noto Sans HK", sans-serif;
   font-size: 0.875rem;
-}
-.newsblock .card__border {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  height: 100%;
-  width: 100%;
-  border: 1px solid rgb(241, 145, 1);
+  line-height: 1.5;
 }
 
-.register-account {
+.login-account {
   background: rgba(0, 0, 0, 0.39);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1114,38 +1107,55 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 400px;
+  max-height: 500px;
+  height: 100%;
   width: 500px;
-  color: black;
+  color: white;
 }
-.register-account form {
+.login-account h5 {
+  font-size: 3rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.login-account form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 250px;
+  width: 300px;
+  margin-bottom: 3.5rem;
+  transition: none;
 }
-.register-account__section {
+.login-account form .btn {
+  transition: none;
+}
+.login-account form .btn:hover {
+  transform: none;
+}
+.login-account__section {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
 }
-.register-account__section label {
+.login-account__section label {
   width: 100%;
   text-align: left;
 }
-.register-account__section input {
+.login-account__section input {
   width: 100%;
   height: 2rem;
 }
-.register-account__section button {
+.login-account__section button {
   margin-top: 1.5rem;
   font-size: 1rem;
   max-width: none;
   width: 100%;
   height: 2rem;
+}
+.login-account__register-link {
+  color: #fff;
 }
 
 /*# sourceMappingURL=main-output.css.map */

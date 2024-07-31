@@ -3,7 +3,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // images
-import Placeholder from '../assets/portraits_classes/samurai_cool.png';
+import backgroudTemp from '../assets/block_gif/background_temp.gif';
+import devTemp from '../assets/dev_temp.jpeg';
 
 const NewsBlock = () => {
     const cardOneRef = useRef(null);
@@ -72,8 +73,8 @@ const NewsBlock = () => {
                 element: cardOneRef.current,
                 props: {
                     y: 350,
-                    start: 'top 120%',
-                    end: '+=500',
+                    start: 'top 150%',
+                    end: 'top 80%',
                     delay: 0,
                 },
             },
@@ -81,8 +82,8 @@ const NewsBlock = () => {
                 element: cardTwoRef.current,
                 props: {
                     y: 350,
-                    start: 'top 120%',
-                    end: '+=500',
+                    start: 'top 150%',
+                    end: 'top 80%',
                     delay: 0,
                 },
             },
@@ -105,7 +106,7 @@ const NewsBlock = () => {
                     start: animation.props.start,
                     end: animation.props.end,
                     scrub: 1,
-                    ease: 'power4.inOut',
+                    ease: 'none',
                 },
                 stagger: {
                     each: 1,
@@ -155,19 +156,19 @@ const NewsBlock = () => {
                 <div className="newsblock__card-wrapper">
                     <div id="card-one" className="newsblock__card" onMouseEnter={handleMouseEnterCard} onMouseLeave={handleMouseLeaveCard} ref={cardOneRef}>
                         <div class="card__thumbnail-wrapper">
-                            <img className="card__thumbnail" alt="" src={Placeholder} ref={cardThumbNailOne}></img>
+                            <img className="card__thumbnail" alt="" src={backgroudTemp} ref={cardThumbNailOne}></img>
                         </div>
                         <div className="newsblock__card-content">
                             <p className="card__date">DEV TALK | 3 Months Ago</p>
                             <h2 className="card__title">Behind the scenes</h2>
-                            <p className="card__paragraph">Commodo magna cupidatat do consequat consectetur incididunt ut. Eiusmod aute incididunt non et anim ut id cupidatat commodo. Proident quis aliquip reprehenderit aliquip eiusmod quis fugiat aliquip officia irure occaecat officia. JORDEL CHAD</p>
+                            <p className="card__paragraph">Commodo magna cupidatat do consequat consectetur incididunt ut. JORDEL CHAD</p>
                             <div className="card__border"></div>
                             <span className="card__corner-cut" ref={cornerCutRef}></span>
                         </div>
                     </div>
                     <div className="newsblock__card" onMouseEnter={handleMouseEnterCardTwo} onMouseLeave={handleMouseLeaveCardTwo} ref={cardTwoRef}>
                         <div class="card__thumbnail-wrapper">
-                            <img className="card__thumbnail" alt="" src={Placeholder} ref={cardThumbNailTwo}></img>
+                            <img className="card__thumbnail" alt="" src={devTemp} ref={cardThumbNailTwo}></img>
                         </div>
                         <div class="newsblock__card-content">
                             <p className="card__date">DEV TALK | 3 Months Ago</p>
